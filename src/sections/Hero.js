@@ -13,7 +13,7 @@ export default function Hero() {
             <h2 className='font-bold text-4xl text-blueGray-600'>
               Next Generation Research Center
             </h2>
-            <p className='mt-4 text-lg leading-relaxed text-blueGray-500'>
+            <p className='mt-4 text-lg leading-relaxed text-blueGray-200'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Dignissimos laudantium magni vitae, porro ullam possimus dolorum
               eaque odit et nam quasi iusto nobis alias quidem enim harum! Id,
@@ -50,10 +50,9 @@ export default function Hero() {
       </div>
 
       <img
-        className='absolute top-0 right-0'
+        className='absolute top-0 right-0 w-6/12'
         src={require('../assets/img/ngrc_colors5.png').default}
         alt='...'
-        style={{ width: '800px' }}
       />
     </section>
   );
