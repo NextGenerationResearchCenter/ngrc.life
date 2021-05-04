@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import NgrcLogoText from '../assets/img/ngrc_logo_text.png';
+
 export default function NavBar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
@@ -12,7 +14,7 @@ export default function NavBar(props) {
               to='/'
               className='text-emerald-500 text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase'
             >
-              Next Generation Research Center
+              {/* Next Generation Research Center */}
             </Link>
             <button
               className='cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none'
