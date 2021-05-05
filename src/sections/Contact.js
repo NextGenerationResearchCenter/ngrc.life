@@ -38,7 +38,7 @@ export default function Contact() {
       });
   };
   return (
-    <section className='text-gray-600 body-font relative bg-white py-32'>
+    <section className='text-gray-600 body-font relative bg-gray-50 py-5 md:py-32'>
       <h2 className='text-center text-3xl font-bold tracking-tight sm:text-4xl dark:text-coolGray-50'>
         Contact us
       </h2>
