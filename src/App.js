@@ -16,7 +16,7 @@ function App() {
       <Hero />
       <Test />
       {/* <CtaNews /> */}
-      <Vision />
+      {/* <Vision /> */}
       <Contact />
       <Section />
       <Footer />
