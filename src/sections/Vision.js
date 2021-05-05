@@ -1,6 +1,6 @@
 export default function Vision() {
   return (
-    <section className='bg-white dark:bg-gray-800 py-32'>
+    <section className='bg-white dark:bg-gray-800 py-5 md:py-32'>
       <div className='container mx-auto lg:w-2/3'></div>
 
       <div className='container px-6 py-8 mx-auto'>

@@ -1,12 +1,12 @@
 export default function Test() {
   return (
-    <section className='dark:bg-coolGray-800 dark:text-coolGray-100 bg-gray-50 py-32'>
+    <section className='dark:bg-coolGray-800 dark:text-coolGray-100 bg-gray-50 py-5 md:py-32'>
       <div className='container max-w-xl p-6 mx-auto space-y-24 lg:px-8 lg:max-w-7xl'>
         <div>
-          <h2 className='text-3xl font-bold tracking-tight text-center sm:text-4xl dark:text-coolGray-50'>
+          <h2 className='text-2xl wd:text-3xl font-bold tracking-tight text-center sm:text-4xl dark:text-coolGray-50'>
             NGRC Engagnement in botanical vaccine ― BioVac
           </h2>
-          <p className='max-w-5xl mx-auto mt-4 text-xl text-center dark:text-coolGray-400'>
+          <p className='max-w-5xl mx-auto mt-4 text-base md:text-xl text-center dark:text-coolGray-400'>
             We are currently in a close collaboration with a highly skilled
             science team which have several years developing BioV, which is now
             read to be launched. Their studies have shown very promising results
@@ -18,10 +18,10 @@ export default function Test() {
 
         <div className='grid lg:gap-8 lg:grid-cols-2 lg:items-center w-100'>
           <div>
-            <h3 className='text-2xl font-bold tracking-tight sm:text-3xl dark:text-coolGray-50'>
+            <h3 className='text-xl md:text-2xl font-bold tracking-tight sm:text-3xl dark:text-coolGray-50'>
               BioVac features
             </h3>
-            <p className='mt-3 text-lg dark:text-coolGray-400'>
+            <p className='mt-3 text-base md:text-lg dark:text-coolGray-400'>
               Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos
               etiam regione ut, persius eripuit quo id. Sit te euismod
               tacimates.
@@ -47,10 +47,10 @@ export default function Test() {
                   </div>
                 </div>
                 <div className='ml-4'>
-                  <h4 className='text-lg font-medium leading-6 dark:text-coolGray-50'>
+                  <h4 className='text-xl md:text-lg font-medium leading-6 dark:text-coolGray-50'>
                     Argument 1
                   </h4>
-                  <p className='mt-2 dark:text-coolGray-400'>
+                  <p className='mt-2 dark:text-coolGray-400 text-base md:text-lg'>
                     Ex usu illum iudico molestie. Pro ne agam facete
                     mediocritatem, ridens labore facete mea ei. Pro id apeirian
                     dignissim.
@@ -77,7 +77,7 @@ export default function Test() {
                   </div>
                 </div>
                 <div className='ml-4'>
-                  <h4 className='text-lg font-medium leading-6 dark:text-coolGray-50'>
+                  <h4 className='text-xl md:text-lg font-medium leading-6 dark:text-coolGray-50'>
                     Cu imperdiet posidonium sed
                   </h4>
                   <p className='mt-2 dark:text-coolGray-400'>
@@ -107,7 +107,7 @@ export default function Test() {
                   </div>
                 </div>
                 <div className='ml-4'>
-                  <h4 className='text-lg font-medium leading-6 dark:text-coolGray-50'>
+                  <h4 className='text-xl md:text-lg font-medium leading-6 dark:text-coolGray-50'>
                     Nulla omittam sadipscing mel ne
                   </h4>
                   <p className='mt-2 dark:text-coolGray-400'>
@@ -130,10 +130,10 @@ export default function Test() {
 
         <div class='flex flex-wrap items-center align-top'>
           <div class='lg:w-2/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0'>
-            <h1 class='title-font font-medium text-2xl text-gray-900'>
+            <h1 class='title-font font-medium text-xl md:text-2xl text-gray-900'>
               Do you want more info about BioVac?
             </h1>
-            <p class='leading-relaxed mt-4'>
+            <p class='leading-relaxed mt-4 text-base md:text-lg'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
               pariatur velit ducimus voluptas, accusamus nihil id quibusdam
               labore soluta corporis repellendus blanditiis accusantium totam
