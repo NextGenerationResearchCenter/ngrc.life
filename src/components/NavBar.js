@@ -1,9 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import NgrcLogoText from '../assets/img/ngrc_logo_text.png';
+import { useTranslation } from 'react-i18next';
 
 export default function NavBar(props) {
+  const changeLanguage = (code) => {
+    i18n.changeLanguage(code);
+  };
+
+  const getLanguage = () => {
+    const currentLanguage = i18n.language;
+    return currentLanguage;
+  };
+
+  const { t, i18n } = useTranslation();
+
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
@@ -50,20 +60,33 @@ export default function NavBar(props) {
                   to='/admin/dashboard'
                   className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
                 >
-                  News
+                  {t('ni1')}
                 </Link>
                 <Link
                   to='/admin/settings'
                   className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
                 >
-                  Vision
+                  {t('ni2')}
                 </Link>
                 <Link
                   to='/admin/tables'
                   className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
                 >
-                  Contact
+                  {t('ni3')}
                 </Link>
+                <span
+                  onClick={() => changeLanguage('sv')}
+                  className='font-bold text-sm m-2'
+                >
+                  SWE
+                </span>
+
+                <span
+                  onClick={() => changeLanguage('en')}
+                  className='font-bold text-sm m-2'
+                >
+                  ENG
+                </span>
               </li>
               <li className='flex items-center'>
                 <a

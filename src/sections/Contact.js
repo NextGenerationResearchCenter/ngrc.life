@@ -1,6 +1,44 @@
+import React, { useState } from 'react';
+import { Axios, db } from '../firebase/firebaseConfig';
+import { useTranslation } from 'react-i18next';
+
 export default function Contact() {
+  const [formData, setFormData] = useState({});
+
+  const updateInput = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    sendEmail();
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
+  };
+  const sendEmail = () => {
+    Axios.post(
+      'https://us-central1-ngrc-webapp.cloudfunctions.net/submit',
+      formData
+    )
+      .then((res) => {
+        db.collection('contact_emails').add({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          time: new Date(),
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
-    <section className='text-gray-600 body-font relative bg-gray-50 py-32'>
+    <section className='text-gray-600 body-font relative bg-white py-32'>
       <h2 className='text-center text-3xl font-bold tracking-tight sm:text-4xl dark:text-coolGray-50'>
         Contact us
       </h2>
@@ -47,42 +85,53 @@ export default function Contact() {
           <h2 class='text-gray-900 text-xl font-medium title-font mb-5 mx-auto'>
             Contact and feedback
           </h2>
-          <div class='relative mb-4'>
-            <label for='full-name' class='leading-7 text-sm text-gray-600'>
-              Full Name
-            </label>
-            <input
-              type='text'
-              id='full-name'
-              name='full-name'
-              class='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-              control-id='ControlID-83'
-            />
-          </div>
-          <div class='relative mb-4'>
-            <label for='email' class='leading-7 text-sm text-gray-600'>
-              Email
-            </label>
-            <input
-              type='email'
-              id='email'
-              name='email'
-              class='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-            />
-            <div className='relative mb-4'>
-              <label for='message' className='leading-7 text-sm text-gray-600'>
-                Message
+          <form onSubmit={handleSubmit}>
+            <div class='relative mb-4'>
+              <label for='full-name' class='leading-7 text-sm text-gray-600'>
+                Full Name
               </label>
-              <textarea
-                id='message'
-                name='message'
-                className='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'
-              ></textarea>
+              <input
+                type='text'
+                id='name'
+                name='name'
+                class='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                control-id='ControlID-83'
+                onChange={updateInput}
+                value={formData.name || ''}
+              />
             </div>
-          </div>
-          <button class='text-white bg-gray-600 border-0 py-2 px-8 focus:outline-none hover:bg-gray-800 rounded text-lg'>
-            Send message
-          </button>
+            <div class='relative mb-4'>
+              <label for='email' class='leading-7 text-sm text-gray-600'>
+                Email
+              </label>
+              <input
+                type='email'
+                id='email'
+                name='email'
+                class='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                onChange={updateInput}
+                value={formData.email || ''}
+              />
+              <div className='relative mb-4'>
+                <label
+                  for='message'
+                  className='leading-7 text-sm text-gray-600'
+                >
+                  Message
+                </label>
+                <textarea
+                  id='message'
+                  name='message'
+                  className='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'
+                  onChange={updateInput}
+                  value={formData.message || ''}
+                ></textarea>
+              </div>
+            </div>
+            <button class='text-white bg-gray-600 border-0 py-2 px-8 focus:outline-none hover:bg-gray-800 rounded text-lg'>
+              Send message
+            </button>
+          </form>
           <p class='text-xs text-gray-500 mt-3'>
             Literally you probably haven't heard of them jean shorts.
           </p>
@@ -143,3 +192,49 @@ export default function Contact() {
     </section>
   );
 }
+
+// <form
+// onSubmit={handleSubmit}
+// className='contact-section-style'
+// >
+// <Form.Label>Name:</Form.Label>
+// <Form.Control
+//   className='contact-section-style'
+//   type='text'
+//   name='name'
+//   placeholder='Name'
+//   onChange={updateInput}
+//   value={formData.name || ''}
+// />
+
+// <Form.Label>E-mail:</Form.Label>
+// <Form.Control
+//   className='contact-section-style'
+//   type='email'
+//   name='email'
+//   placeholder='E-mail'
+//   onChange={updateInput}
+//   value={formData.email || ''}
+// />
+
+// <Form.Label>Message:</Form.Label>
+// <Form.Control
+//   as='textarea'
+//   className='contact-section-style'
+//   rows={3}
+//   name='message'
+//   placeholder='Message'
+//   onChange={updateInput}
+//   value={formData.message || ''}
+// />
+// <div className='mt-4 pb-4 mr-auto'>
+//   <Button
+//     type='submit'
+//     variant='success'
+//     size={window.innerWidth > 800 ? 'lg' : 'sm'}
+//     className='rounded-pill'
+//   >
+//     Send message
+//   </Button>
+// </div>
+// </form>
