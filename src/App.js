@@ -8,6 +8,7 @@ import Section from './sections/Section';
 import Vision from './sections/Vision';
 // import CtaNews from './sections/CtaNews';
 import Test from './sections/Test';
+import Separator from './sections/Separator1';
 
 function App() {
   return (
@@ -15,10 +16,12 @@ function App() {
       <NavBar />
       <Hero />
       <Test />
+      {/* <Section /> */}
+      {/* <Separator /> */}
       {/* <CtaNews /> */}
       {/* <Vision /> */}
       <Contact />
-      <Section />
+
       <Footer />
     </Router>
   );

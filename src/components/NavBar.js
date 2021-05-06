@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-scroll';
 
 export default function NavBar(props) {
   const changeLanguage = (code) => {
@@ -17,14 +17,14 @@ export default function NavBar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
-      <nav className='top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow'>
+      <nav className='top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-gray-100 shadow'>
         <div className='container px-4 mx-auto flex flex-wrap items-center justify-between'>
           <div className='w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
             <Link
               to='/'
               className='text-emerald-500 text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase'
             >
-              {/* Next Generation Research Center */}
+              Next Generation Research Center
             </Link>
             <button
               className='cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none'
@@ -53,26 +53,44 @@ export default function NavBar(props) {
               </li>
             </ul> */}
             <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
-              <li className='flex items-center flex-col lg:flex-row'>
+              <li className='flex items-center flex-col lg:flex-row bg-gray-100'>
                 {/* <IndexDropdown /> */}
                 {/* <HeroDropdown /> */}
                 <Link
-                  to='/admin/dashboard'
                   className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                  to='header'
+                  spy={true}
+                  smooth={true}
+                  duration={1000}
                 >
                   {t('ni1')}
                 </Link>
                 <Link
-                  to='/admin/settings'
                   className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                  to='news'
+                  spy={true}
+                  smooth={true}
+                  duration={1000}
                 >
                   {t('ni2')}
                 </Link>
                 <Link
-                  to='/admin/tables'
                   className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                  to='about'
+                  spy={true}
+                  smooth={true}
+                  duration={1000}
                 >
                   {t('ni3')}
+                </Link>
+                <Link
+                  className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                  to='contact'
+                  spy={true}
+                  smooth={true}
+                  duration={1000}
+                >
+                  {t('ni4')}
                 </Link>
                 <span
                   onClick={() => changeLanguage('sv')}
@@ -126,10 +144,10 @@ export default function NavBar(props) {
 
               <li className='flex items-center'>
                 <button
-                  className='bg-purple-500 text-white active:bg-red-700 text-sm font-bold uppercase px-4 py-2 rounded-full shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150'
+                  className='bg-gray-700 text-white active:bg-red-700 text-sm font-bold uppercase px-4 py-2 rounded-full shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150'
                   type='button'
                 >
-                  <i class='fas fa-info-circle'></i> BioVac Info
+                  <i class='fas fa-info-circle'></i> CALL TO ACTION
                 </button>
               </li>
             </ul>

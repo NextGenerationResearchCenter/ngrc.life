@@ -1,25 +1,36 @@
+import bg from '../assets/img/ngrc_sep_grey2.png';
+
 export default function Test() {
   return (
-    <section className='dark:bg-coolGray-800 dark:text-coolGray-100 bg-gray-50 py-5 md:py-32'>
+    <section
+      className='about dark:bg-coolGray-800 dark:text-coolGray-100 bg-gray-50 py-5 md:py-32'
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      >
       <div className='container max-w-xl p-6 mx-auto space-y-24 lg:px-8 lg:max-w-7xl'>
         <div>
           <h2 className='text-2xl wd:text-3xl font-bold tracking-tight text-center sm:text-4xl dark:text-coolGray-50'>
-            NGRC Engagnement in botanical vaccine ― BioVac
+            Heading 1
           </h2>
-          <p className='max-w-5xl mx-auto mt-4 text-base md:text-xl text-center dark:text-coolGray-400'>
-            We are currently in a close collaboration with a highly skilled
-            science team which have several years developing BioV, which is now
-            read to be launched. Their studies have shown very promising results
-            in the fight against the spread of Covid-19 and other viruses. NGRC
-            will support and enable the next phase of the process of securing
-            that this natural remedy reaches the masses.
+          <p className='max-w-5xl mx-auto mt-4 text-base md:text-xl dark:text-coolGray-400'>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi
+            suscipit explicabo praesentium iusto soluta excepturi earum rem quas
+            culpa voluptatem adipisci laudantium sed, quis debitis odio deleniti
+            maxime tempore! Quis? Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Minus repudiandae ea ratione porro, harum
+            praesentium qui aperiam iusto natus numquam magni in molestias
+            accusantium vitae alias laudantium eveniet illum maiores!
           </p>
         </div>
 
         <div className='grid lg:gap-8 lg:grid-cols-2 lg:items-center w-100'>
           <div>
             <h3 className='text-xl md:text-2xl font-bold tracking-tight sm:text-3xl dark:text-coolGray-50'>
-              BioVac features
+              Heading 2
             </h3>
             <p className='mt-3 text-base md:text-lg dark:text-coolGray-400'>
               Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos
@@ -128,7 +139,7 @@ export default function Test() {
           </div>
         </div>
 
-        <div class='flex flex-wrap items-center align-top'>
+        {/* <div class='flex flex-wrap items-center align-top'>
           <div class='lg:w-2/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0'>
             <h1 class='title-font font-medium text-xl md:text-2xl text-gray-900'>
               Do you want more info about BioVac?
@@ -174,7 +185,7 @@ export default function Test() {
               Literally you probably haven't heard of them jean shorts.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

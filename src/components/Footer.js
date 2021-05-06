@@ -1,11 +1,26 @@
+// import bg from '../assets/img/ngrc_sep_grey.png';
+
 export default function Footer() {
   return (
-    <footer className='bg-white dark:bg-gray-800 py-10'>
+    <footer
+      className='bg-white dark:bg-gray-800 py-10 bg-footer-design bg-opacity-10'
+      // style={{
+      //   backgroundImage: `url(${bg})`,
+      //   backgroundSize: 'cover',
+      //   backgroundRepeat: 'no-repeat',
+      // }}
+    >
       <div className='container px-6 py-4 mx-auto'>
         <div className='lg:flex'>
           <div className='w-full -mx-6 lg:w-2/5'>
             <div className='px-6'>
               <div>
+                <img
+                  src={require('../assets/img/ngrc_2.png').default}
+                  alt='...'
+                  // style={{ width: '300px' }}
+                  className='w-36 sm:w-52'
+                />
                 <a
                   href='#'
                   className='text-2xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300'
@@ -18,7 +33,7 @@ export default function Footer() {
                 Bringing science to everyday life
               </p>
               <br />
-              <br />
+
               {/* <p>
                 Next Generation Research Center (NGRC) is changing the world. We
                 are bridging the gap between science and everyday life in order

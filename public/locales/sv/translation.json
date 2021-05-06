@@ -1,7 +1,9 @@
 {
-  "ni1": "Om",
-  "ni2": "Kontakt",
-  "ni3": "Nyheter",
-  "description": {
-  }
+  "ni1": "Hem",
+  "ni2": "Nyheter & press",
+  "ni3": "Om",
+  "ni4": "Kontakt",
+  "contact": "Kontakt",
+  "hero-b1": "Läs mer om oss",
+  "hero-b2": "Kontakta oss"
 }
