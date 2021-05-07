@@ -4,11 +4,9 @@ import NavBar from './components/NavBar';
 import Hero from './sections/Hero';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
-import Section from './sections/Section';
-import Vision from './sections/Vision';
-// import CtaNews from './sections/CtaNews';
 import Test from './sections/Test';
-import Separator from './sections/Separator1';
+// import Section from './sections/Section';
+// import Testomomials from './sections/Testomomials';
 
 function App() {
   return (
@@ -17,9 +15,7 @@ function App() {
       <Hero />
       <Test />
       {/* <Section /> */}
-      {/* <Separator /> */}
-      {/* <CtaNews /> */}
-      {/* <Vision /> */}
+      {/* <Testomomials /> */}
       <Contact />
 
       <Footer />
