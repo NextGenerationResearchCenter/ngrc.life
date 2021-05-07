@@ -1,31 +1,43 @@
+// import bg from '../assets/img/ngrc_sep_grey.png';
+
 export default function Footer() {
   return (
-    <footer className='bg-white dark:bg-gray-800 py-10'>
+    <footer
+      className='bg-white dark:bg-gray-800 py-10 bg-footer-design bg-opacity-10'
+      // style={{
+      //   backgroundImage: `url(${bg})`,
+      //   backgroundSize: 'cover',
+      //   backgroundRepeat: 'no-repeat',
+      // }}
+    >
       <div className='container px-6 py-4 mx-auto'>
         <div className='lg:flex'>
           <div className='w-full -mx-6 lg:w-2/5'>
             <div className='px-6'>
               <div>
-                <a
-                  href='#'
-                  className='text-2xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300'
-                >
+                <img
+                  src={require('../assets/img/ngrc_logo2.png').default}
+                  alt='...'
+                  // style={{ width: '300px' }}
+                  className='w-36 sm:w-44'
+                />
+                <span className='text-2xl font-semibold text-gray-700 dark:text-white hover:text-gray-700 dark:hover:text-gray-300'>
                   Next Generation Research Center
-                </a>
+                </span>
               </div>
 
               <p className='max-w-md mt-2 text-gray-500 dark:text-gray-400 font-semibold'>
                 Bringing science to everyday life
               </p>
               <br />
-              <br />
+
               {/* <p>
                 Next Generation Research Center (NGRC) is changing the world. We
                 are bridging the gap between science and everyday life in order
                 to support a society based upon the values of compassion and
                 cooperation.
               </p> */}
-
+              {/* 
               <div className='flex mt-4 -mx-2'>
                 <a
                   href='#'
@@ -56,14 +68,14 @@ export default function Footer() {
                     <path d='M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z' />
                   </svg>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
 
           <div className='mt-6 lg:mt-0 lg:flex-1'>
             <div className='grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4'>
               <div>
-                <h3 className='text-gray-700 uppercase dark:text-white'>
+                {/* <h3 className='text-gray-700 uppercase dark:text-white'>
                   About
                 </h3>
                 <a
@@ -131,11 +143,11 @@ export default function Footer() {
                   className='block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline'
                 >
                   Meraki UI
-                </a>
+                </a> */}
               </div>
 
               <div>
-                <h3 className='text-gray-700 uppercase dark:text-white'>
+                {/* <h3 className='text-gray-700 uppercase dark:text-white'>
                   Contact
                 </h3>
                 <span className='block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline'>
@@ -143,7 +155,7 @@ export default function Footer() {
                 </span>
                 <span className='block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline'>
                   info@ngrc.life
-                </span>
+                </span> */}
               </div>
             </div>
           </div>

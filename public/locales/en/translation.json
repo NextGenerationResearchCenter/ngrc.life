@@ -1,7 +1,9 @@
 {
-  "ni1": "About",
-  "ni2": "Contact",
-  "ni3": "News",
-  "description": {
-  }
+  "ni1": "Home",
+  "ni2": "News & press",
+  "ni3": "About",
+  "ni4": "Contact",
+  "contact": "Contact",
+  "hero-b1": "Read more about us",
+  "hero-b2": "Contact us"
 }
