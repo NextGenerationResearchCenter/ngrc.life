@@ -22,16 +22,16 @@ export default function Hero() {
                 className='sm:ml-2 mb-6 w-82 sm:w-7/12 md:w-10/12'
               />
               <p className='mt-4 text-base md:text-xl leading-relaxed text-gray-800'>
-                NGRC are bridging the gap between science and everyday life to
+                NGRC is bridging the gap between science and everyday life to
                 support a society based upon the values of compassion and
                 cooperation. We promote science-based holistic health and
-                environmental sustainability for us, and generations to come.
+                environmental sustainability for us - and generations to come.
               </p>
               <div className='mt-10'>
                 <Link to='news' spy={true} smooth={true} duration={1000}>
                   {' '}
                   <button className='text-white text-xs md:text-lg lg:text-xl font-bold px-6 md:px-6 py-4 rounded-full outline-none focus:outline-none md:mr-4 mb-1 bg-gray-600 active:bg-green-700 uppercase shadow hover:shadow-lg ease-linear transition-all duration-150'>
-                    Botanical immune booster
+                    Botanical Immune Booster
                   </button>
                 </Link>
                 <span onClick={openVideo}>

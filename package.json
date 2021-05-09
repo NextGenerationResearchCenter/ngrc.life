@@ -26,6 +26,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.2",
+    "react-toastify": "^7.0.4",
     "reactjs-media": "^1.5.1",
     "web-vitals": "^1.1.1"
   },
