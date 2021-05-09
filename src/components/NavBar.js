@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
 // import IndexDropdown from '../components/IndexDropdown';
 // import exitIntent from 'exit-intent';
 
 export default function NavBar(props) {
-  const [selected, setSelected] = useState('');
-  const changeLanguage = (code) => {
-    i18n.changeLanguage(code);
-  };
+  // const changeLanguage = (code) => {
+  //   i18n.changeLanguage(code);
+  // };
 
-  const getLanguage = () => {
-    const currentLanguage = i18n.language;
-    return currentLanguage;
-  };
+  // const getLanguage = () => {
+  //   const currentLanguage = i18n.language;
+  //   return currentLanguage;
+  // };
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  //i18n ska vara med ovan
 
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (

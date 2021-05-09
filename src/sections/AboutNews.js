@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import bg from '../assets/img/ngrc_sep_grey2.png';
-import image from '../assets/img/image.jpeg';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
+import image from '../assets/img/image.jpeg';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 import { db } from '../firebase/firebaseConfig';
 
 export default function Test() {
+  // const [notification, setNotification] = useState('');
   const [formData, setFormData] = useState({});
 
   const updateInput = (e) => {
@@ -16,17 +18,27 @@ export default function Test() {
     });
   };
   const handleSubmit = (event) => {
+    event.preventDefault();
+    postData();
+    setFormData({
+      name: '',
+      email: '',
+    });
+  };
+  const postData = () => {
     db.collection('bio_interest')
       .add({
         name: formData.name,
         email: formData.email,
         time: new Date(),
       })
-      .then(() => {
-        console.log('Document successfully written!');
+      .then((res) => {
+        toast.success('Success: Thank you for showing your interest!');
+        // setNotification('Thank you for your interest!');
       })
       .catch((error) => {
-        console.error('Error', error);
+        toast.error('Error: Something went wrong, try again later!');
+        // setNotification('Sorry! There was an error handeling your request!');
       });
   };
   return (
@@ -115,6 +127,22 @@ export default function Test() {
               <button className='text-white bg-gray-500 border-0 py-2 px-8 focus:outline-none hover:bg-gray-600 rounded-full text-lg'>
                 Submit
               </button>
+            </div>
+            <div className='flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end mb-20'>
+              <span className='text-center text-lg md:text-xl w-full font-bold'>
+                <ToastContainer
+                  position='top-right'
+                  autoClose={5000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                />
+                {/* {notification} */}
+              </span>
             </div>
           </form>
         </div>

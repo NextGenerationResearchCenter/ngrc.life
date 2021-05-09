@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Axios, db } from '../firebase/firebaseConfig';
-import { useTranslation } from 'react-i18next';
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function Contact() {
   const [formData, setFormData] = useState({});
@@ -33,8 +33,11 @@ export default function Contact() {
           time: new Date(),
         });
       })
+      .then((res) => {
+        toast.success('Success: Contact info sent!');
+      })
       .catch((error) => {
-        console.log(error);
+        toast.error('Error: Something went wrong, please try again later!');
       });
   };
   return (
@@ -114,6 +117,17 @@ export default function Contact() {
               Send message
             </button>
           </form>
+          <ToastContainer
+            position='top-right'
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
           <p className='text-xs text-gray-500 mt-3'>Some understext here</p>
         </div>
       </div>
