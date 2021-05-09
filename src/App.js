@@ -4,7 +4,7 @@ import NavBar from './components/NavBar';
 import Hero from './sections/Hero';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
-import Test from './sections/Test';
+import AboutNews from './sections/AboutNews';
 // import Section from './sections/Section';
 // import Testomomials from './sections/Testomomials';
 
@@ -13,7 +13,7 @@ function App() {
     <Router>
       <NavBar />
       <Hero />
-      <Test />
+      <AboutNews />
       {/* <Section /> */}
       {/* <Testomomials /> */}
       <Contact />

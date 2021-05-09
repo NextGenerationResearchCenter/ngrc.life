@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import bg from '../assets/img/ngrc_sep_grey2.png';
 import image from '../assets/img/image.jpeg';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { db } from '../firebase/firebaseConfig';
 
@@ -14,28 +16,18 @@ export default function Test() {
     });
   };
   const handleSubmit = (event) => {
-    event.preventDefault();
-    sendEmail();
-    setFormData({
-      name: '',
-      email: '',
-    });
-  };
-  const sendEmail = () => {
-    // Axios.post(
-    //   'https://us-central1-ngrc-webapp.cloudfunctions.net/submit',
-    //   formData
-    // )
-    //   .then((res) => {
-    db.collection('bio_interest').add({
-      name: formData.name,
-      email: formData.email,
-      time: new Date(),
-    });
-    // })
-    // .catch((error) => {
-    //   console.log(error);
-    // });
+    db.collection('bio_interest')
+      .add({
+        name: formData.name,
+        email: formData.email,
+        time: new Date(),
+      })
+      .then(() => {
+        console.log('Document successfully written!');
+      })
+      .catch((error) => {
+        console.error('Error', error);
+      });
   };
   return (
     <>
@@ -53,20 +45,20 @@ export default function Test() {
               {/* <i className='fas fa-infinity text-gray-600'></i>  */}
               Botanical Immune Booster
             </h2>
-            <p className='mx-auto leading-relaxed text-lg lg:text-lg2'>
+            <p className='mt-2 dark:text-coolGray-400 text-base md:text-lg'>
               This last year has left us all very challenged in everyday life.
               However, a promising solution is near. NGRC has reached an
-              agreement with a highly proficient FDA-approved science team,
+              agreement with a highly proficient FDA- approved science team,
               which has been developing a non-invasive Botanical Immune Booster
               for several years. In collaboration with this science team ― NGRC
               will distribute the natural protection to the market! Moreover,
               in-depth discussions are being conducted with the government in a
-              large country which is ready to initiate the launch of this
-              natural method to its citizens.
+              large country that is ready to initiate the launch of this natural
+              method to its citizens.
             </p>
             <p className='text-lg xl:text-2xl font-semibold mt-16 text-gray-900 mt-3'>
-              Are you interested in learning more about this Botanical Immune
-              Booster?
+              Are you interested in learning more about this natural anti-viral
+              protection?
             </p>
             <p className='text-gray-400 text-md text-gray-500'>
               For more more information, once it is available ― fill in the form
@@ -136,18 +128,17 @@ export default function Test() {
             </h2>
             <p className='max-w-5xl mt-4 text-base md:text-xl dark:text-coolGray-400'>
               Next Generation Research Center (NGRC) is changing the world. We
-              are bridging the gap between science and everyday life in order to
-              support a society based upon the values of compassion and
-              cooperation.
+              are bridging the gap between science and everyday life to support
+              a society based upon the values of compassion and cooperation.
             </p>
             <p className='max-w-5xl mt-4 text-base md:text-xl dark:text-coolGray-400'>
               {' '}
               By engaging a global community with health professionals and
               health seekers, we co-create a platform from which everyone can
-              thrive through innovative education, leadership,
-              inter-professional collaboration, and research. We embrace global
-              research-based healing traditions, and will promote the delivery
-              of evidence-based, sustainable, affordable person-centered care.
+              thrive through innovative education, leadership, inter-
+              professional collaboration, and research. We embrace global
+              research-based traditions and will promote the delivery of
+              evidence-based, sustainable, affordable person-centered care.
             </p>
           </div>
           <div className='grid lg:gap-8 lg:grid-cols-2 lg:items-center w-100'>
@@ -188,9 +179,9 @@ export default function Test() {
                     </h4>
                     <p className='mt-2 dark:text-coolGray-400 text-base md:text-lg'>
                       To create a society based upon the values of compassion
-                      and cooperation, where evidence-based, pro-health and
+                      and cooperation, where evidence-based pro-health and
                       environmentally sustainable solutions are well integrated
-                      in the system and in everyday life, and encourages the
+                      into the system and in everyday life, and encourages the
                       people to feel empowered to change their lives.
                     </p>
                   </div>
@@ -218,9 +209,9 @@ export default function Test() {
                     <h4 className='text-gray-800 text-xl md:text-lg font-bold leading-6 dark:text-coolGray-50'>
                       Our Mission
                     </h4>
-                    <p className='mt-2 dark:text-coolGray-400'>
+                    <p className='mt-2 dark:text-coolGray-400 text-base md:text-lg'>
                       To support, create and promote science targeted to benefit
-                      the wellbeing of the people and the planet, and make sure
+                      the wellbeing of the people and the planet - and make sure
                       the world hears about it.
                     </p>
                   </div>
@@ -236,6 +227,18 @@ export default function Test() {
               />
             </div>
           </div>
+          <p className='mt-2 dark:text-coolGray-400 text-base md:text-lg'>
+            We are operating in multiple fields to serve humanity in the way we
+            love – by spreading science-based knowledge and insights to the
+            masses. NGRC is the heart of this new community, and we will promote
+            the sharing of knowledge and creativity through our{' '}
+            <b>Next Generation Business Center (NGBC) and NGRC Talks</b>. NGBC
+            is a support function for Startups, Sole Traders and businesses, and
+            offers office space, business and marketing training programs and
+            much more. NGRC Talks is our platform for public speakers from which
+            everyone can benefit by learning from the best experts and speakers
+            in the world.
+          </p>
         </div>
       </section>
     </>
