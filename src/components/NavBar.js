@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
 // import IndexDropdown from '../components/IndexDropdown';
+import ReactFlagsSelect from 'react-flags-select';
+
 // import exitIntent from 'exit-intent';
 
-export default function NavBar(props) {
-  // const changeLanguage = (code) => {
-  //   i18n.changeLanguage(code);
-  // };
-
-  // const getLanguage = () => {
-  //   const currentLanguage = i18n.language;
-  //   return currentLanguage;
-  // };
-
-  const { t } = useTranslation();
-  //i18n ska vara med ovan
-
+export default function NavBar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [selected, setSelected] = useState('GB');
+  const [lan, setLan] = useState('');
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    if (selected === 'GB') {
+      setLan('en');
+    } else if (selected === 'SE') {
+      setLan('sv');
+    }
+    i18n.changeLanguage(lan);
+  }, [i18n, lan, selected]);
+
   return (
     <>
       <nav className='top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 navbar-expand-lg bg-gray-50 shadow'>
@@ -97,6 +100,19 @@ export default function NavBar(props) {
                     {t('ni4')}
                   </Link>
                   {/* <IndexDropdown /> */}
+                </li>
+                <li className='flex flex-col lg:flex-row bg-gray-50 mx-8'>
+                  <ReactFlagsSelect
+                    countries={['GB', 'SE']}
+                    customLabels={{
+                      GB: 'EN',
+                      SE: 'SE',
+                    }}
+                    placeholder='Language'
+                    selected={selected}
+                    onSelect={(code) => setSelected(code)}
+                    className='m-0 p-0'
+                  />
                 </li>
               </ul>
               <div className='flex bg-gray-50 items-center'>

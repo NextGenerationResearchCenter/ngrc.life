@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { db } from '../firebase/firebaseConfig';
 
 export default function Test() {
-  // const [notification, setNotification] = useState('');
   const [formData, setFormData] = useState({});
 
   const updateInput = (e) => {
@@ -34,11 +33,9 @@ export default function Test() {
       })
       .then((res) => {
         toast.success('Success: Thank you for showing your interest!');
-        // setNotification('Thank you for your interest!');
       })
       .catch((error) => {
         toast.error('Error: Something went wrong, try again later!');
-        // setNotification('Sorry! There was an error handeling your request!');
       });
   };
   return (
@@ -139,9 +136,9 @@ export default function Test() {
                 Submit
               </button>
             </div>
-            <p className='text-xs text-gray-500 flex lg:w-2/3 w-full mx-auto px-8 sm:space-x-4 sm:px-0 mt-2 text-center'>
+            {/* <p className='text-xs text-gray-500 flex lg:w-2/3 w-full mx-auto px-8 sm:space-x-4 sm:px-0 mt-2 text-center'>
               (By filling in this form you agree to getting our newsletter)
-            </p>
+            </p> */}
           </form>
         </div>
       </section>
