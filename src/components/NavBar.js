@@ -101,7 +101,7 @@ export default function NavBar() {
                   </Link>
                   {/* <IndexDropdown /> */}
                 </li>
-                <li className='flex flex-col lg:flex-row bg-gray-50 mx-8'>
+                <li className='flex flex-col lg:flex-row bg-gray-50 px-6 py-3 lg:py-0'>
                   <ReactFlagsSelect
                     countries={['GB', 'SE']}
                     customLabels={{
@@ -111,7 +111,7 @@ export default function NavBar() {
                     placeholder='Language'
                     selected={selected}
                     onSelect={(code) => setSelected(code)}
-                    className='m-0 p-0'
+                    className='m-0 p-0 bg-gray-50'
                   />
                 </li>
               </ul>
