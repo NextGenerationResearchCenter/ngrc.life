@@ -23,54 +23,12 @@ export default function NavBar(props) {
       <nav className='top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 navbar-expand-lg bg-gray-50 shadow'>
         <div className='container px-4 mx-auto flex flex-wrap items-center justify-between py-2'>
           <div className='w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
-            <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
-              <li className='flex items-center flex-col lg:flex-row bg-gray-50'>
-                {/* <HeroDropdown /> */}
-                <Link
-                  className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                  to='header'
-                  spy={true}
-                  smooth={true}
-                  duration={1000}
-                >
-                  {t('ni1')}
-                </Link>
-                <Link
-                  className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                  to='news'
-                  spy={true}
-                  smooth={true}
-                  duration={1000}
-                >
-                  {t('ni2')}
-                </Link>
-                <Link
-                  className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                  to='about'
-                  spy={true}
-                  smooth={true}
-                  duration={1000}
-                >
-                  {t('ni3')}
-                </Link>
-                <Link
-                  className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                  to='contact'
-                  spy={true}
-                  smooth={true}
-                  duration={1000}
-                >
-                  {t('ni4')}
-                </Link>
-                {/* <IndexDropdown /> */}
-              </li>
-            </ul>
-            {/* <Link
+            <Link
               to='/'
               className='text-emerald-500 text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase'
             >
               Next Generation Research Center
-            </Link> */}
+            </Link>
             <button
               className='cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none'
               type='button'
@@ -97,7 +55,50 @@ export default function NavBar(props) {
                 </a>
               </li>
             </ul> */}
+
             <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
+              <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
+                <li className='flex items-center flex-col lg:flex-row bg-gray-50'>
+                  {/* <HeroDropdown /> */}
+                  <Link
+                    className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                    to='header'
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                  >
+                    {t('ni1')}
+                  </Link>
+                  <Link
+                    className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                    to='news'
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                  >
+                    {t('ni2')}
+                  </Link>
+                  <Link
+                    className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                    to='about'
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                  >
+                    {t('ni3')}
+                  </Link>
+                  <Link
+                    className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                    to='contact'
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                  >
+                    {t('ni4')}
+                  </Link>
+                  {/* <IndexDropdown /> */}
+                </li>
+              </ul>
               <div className='flex bg-gray-50 items-center'>
                 <li className='flex items-center'>
                   <a

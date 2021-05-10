@@ -43,8 +43,19 @@ export default function Test() {
   };
   return (
     <>
+      <ToastContainer
+        position='top-right'
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <section
-        className='news text-gray-600 body-font bg-gray-50 lg:py-20 h-100'
+        className='news text-gray-600 body-font bg-gray-50 py-20 -100'
         style={{
           backgroundImage: `url(${bg})`,
           backgroundSize: 'cover',
@@ -91,7 +102,7 @@ export default function Test() {
             </p>
           </div> */}
           <form onSubmit={handleSubmit}>
-            <div className='flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end mb-20'>
+            <div className='flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:px-0 items-end'>
               <div className='relative flex-grow w-full'>
                 <label
                   htmlFor='name'
@@ -124,26 +135,13 @@ export default function Test() {
                   value={formData.email || ''}
                 />
               </div>
-              <button className='text-white bg-gray-500 border-0 py-2 px-8 focus:outline-none hover:bg-gray-600 rounded-full text-lg'>
+              <button className='text-white bg-gray-500 border-0 py-2 px-8 focus:outline-none hover:bg-gray-600 rounded-full text-lg m-2 sm:m-0'>
                 Submit
               </button>
             </div>
-            <div className='flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end mb-20'>
-              <span className='text-center text-lg md:text-xl w-full font-bold'>
-                <ToastContainer
-                  position='top-right'
-                  autoClose={5000}
-                  hideProgressBar={false}
-                  newestOnTop={false}
-                  closeOnClick
-                  rtl={false}
-                  pauseOnFocusLoss
-                  draggable
-                  pauseOnHover
-                />
-                {/* {notification} */}
-              </span>
-            </div>
+            <p className='text-xs text-gray-500 flex lg:w-2/3 w-full mx-auto px-8 sm:space-x-4 sm:px-0 mt-2 text-center'>
+              (By filling in this form you agree to getting our newsletter)
+            </p>
           </form>
         </div>
       </section>

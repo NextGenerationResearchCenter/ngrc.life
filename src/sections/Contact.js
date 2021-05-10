@@ -128,7 +128,7 @@ export default function Contact() {
             draggable
             pauseOnHover
           />
-          <p className='text-xs text-gray-500 mt-3'>Some understext here</p>
+          {/* <p className='text-xs text-gray-500 mt-3'>Some understext here</p> */}
         </div>
       </div>
     </section>

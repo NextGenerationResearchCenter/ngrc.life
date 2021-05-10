@@ -30,13 +30,13 @@ export default function Hero() {
               <div className='mt-10'>
                 <Link to='news' spy={true} smooth={true} duration={1000}>
                   {' '}
-                  <button className='text-white text-xs md:text-lg lg:text-xl font-bold px-6 md:px-6 py-4 rounded-full outline-none focus:outline-none md:mr-4 mb-1 bg-gray-600 active:bg-green-700 uppercase shadow hover:shadow-lg ease-linear transition-all duration-150'>
-                    Botanical Immune Booster
+                  <button className='text-md text-white text-sm md:text-lg lg:text-xl font-bold mx-1 px-8 md:px-8 py-4 rounded-full outline-none focus:outline-none mb-1 bg-gray-600 active:bg-gray-700 uppercase shadow hover:shadow-lg ease-linear transition-all duration-150'>
+                    Botanical immune booster
                   </button>
                 </Link>
                 <span onClick={openVideo}>
-                  <button className='text-md text-white text-sm md:text-lg lg:text-xl font-bold mx-1 px-8 md:px-12 py-4 rounded-full outline-none focus:outline-none mb-1 bg-gray-500 active:bg-gray-700 uppercase shadow hover:shadow-lg ease-linear transition-all duration-150'>
-                    <i className='fas fa-play-circle' /> Load INTRO video
+                  <button className='text-md text-white text-sm md:text-lg lg:text-xl font-bold mx-1 px-8 md:px-8 py-4 rounded-full outline-none focus:outline-none mb-1 bg-gray-500 active:bg-gray-700 uppercase shadow hover:shadow-lg ease-linear transition-all duration-150'>
+                    <i className='fas fa-play-circle' /> INTRO video
                   </button>
                 </span>
               </div>
