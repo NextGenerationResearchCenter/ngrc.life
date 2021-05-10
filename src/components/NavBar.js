@@ -27,10 +27,13 @@ export default function NavBar() {
         <div className='container px-4 mx-auto flex flex-wrap items-center justify-between py-2'>
           <div className='w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
             <Link
-              to='/'
-              className='text-emerald-500 text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase'
+              to='header'
+              spy={true}
+              smooth={true}
+              duration={1000}
+              className='text-emerald-500 text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase cursor-pointer'
             >
-              Next Generation Research Center
+              NGRC Web Platform
             </Link>
             <button
               className='cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none'
@@ -70,7 +73,9 @@ export default function NavBar() {
                     smooth={true}
                     duration={1000}
                   >
-                    {t('ni1')}
+                    <span className='text-gray-800 text-sm font-medium hover:text-black leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
+                      {t('ni1')}
+                    </span>
                   </Link>
                   <Link
                     className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
@@ -79,7 +84,9 @@ export default function NavBar() {
                     smooth={true}
                     duration={1000}
                   >
-                    {t('ni2')}
+                    <span className='text-gray-800 text-sm font-medium hover:text-black  leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
+                      {t('ni2')}
+                    </span>
                   </Link>
                   <Link
                     className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
@@ -88,7 +95,9 @@ export default function NavBar() {
                     smooth={true}
                     duration={1000}
                   >
-                    {t('ni3')}
+                    <span className='text-gray-800 text-sm font-medium hover:text-black  leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
+                      {t('ni3')}
+                    </span>
                   </Link>
                   <Link
                     className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
@@ -97,9 +106,10 @@ export default function NavBar() {
                     smooth={true}
                     duration={1000}
                   >
-                    {t('ni4')}
+                    <span className='text-gray-800 text-sm font-medium hover:text-black  leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
+                      {t('ni4')}
+                    </span>
                   </Link>
-                  {/* <IndexDropdown /> */}
                 </li>
                 <li className='flex flex-col lg:flex-row bg-gray-50 px-6 py-3 lg:py-0'>
                   <ReactFlagsSelect
@@ -115,7 +125,7 @@ export default function NavBar() {
                   />
                 </li>
               </ul>
-              <div className='flex bg-gray-50 items-center'>
+              <div className='flex bg-gray-50 items-center bg-gray-100 rounded-full'>
                 <li className='flex items-center'>
                   <a
                     className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
@@ -123,27 +133,27 @@ export default function NavBar() {
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <i className='text-blueGray-400 fab fa-facebook text-lg leading-lg ' />
+                    <i className='text-blueGray-400 fab fa-facebook-f text-xl leading-lg ' />
                   </a>
                 </li>
-                <li className='flex items-center'>
+                <li className='flex items-center bg-gray-100 rounded-full'>
                   <a
                     className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
                     href='https://www.instagram.com/ngrc.life/'
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <i className='text-blueGray-400 fab fa-instagram-square text-lg leading-lg' />
+                    <i className='text-blueGray-400 fab fa-instagram text-2xl leading-lg' />
                   </a>
                 </li>
-                <li className='flex items-center'>
+                <li className='flex items-center bg-gray-100 rounded-full'>
                   <a
                     className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
                     href='https://www.linkedin.com/company/ngrc/'
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <i className='text-blueGray-400 fab fa-linkedin text-lg leading-lg' />
+                    <i className='text-blueGray-400 fab fa-linkedin-in text-xl leading-lg' />
                   </a>
                 </li>
               </div>
