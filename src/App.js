@@ -1,4 +1,5 @@
 import { BrowserRouter as Router } from 'react-router-dom';
+import firebase from 'firebase';
 
 import NavBar from './components/NavBar';
 import Hero from './sections/Hero';
@@ -9,6 +10,15 @@ import AboutNews from './sections/AboutNews';
 // import Testomomials from './sections/Testomomials';
 
 function App() {
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+    } else {
+      firebase
+        .auth()
+        .signInAnonymously()
+        .catch((error) => console.error(error));
+    }
+  });
   return (
     <Router>
       <NavBar />
