@@ -33,15 +33,17 @@ export default function NavBar() {
               duration={1000}
               className='text-emerald-500 text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase cursor-pointer'
             >
-              NGRC Web Platform
+              Next Generation Research Center
             </Link>
-            <button
-              className='cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none'
-              type='button'
-              onClick={() => setNavbarOpen(!navbarOpen)}
-            >
-              <i className='fas fa-bars'></i>
-            </button>
+            <div className='flex center-items'>
+              <button
+                className='cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none'
+                type='button'
+                onClick={() => setNavbarOpen(!navbarOpen)}
+              >
+                <i className='fas fa-bars'></i>
+              </button>
+            </div>
           </div>
           <div
             className={
@@ -50,22 +52,9 @@ export default function NavBar() {
             }
             id='example-navbar-warning'
           >
-            {/* <ul className='flex flex-col lg:flex-row list-none mr-auto'>
-              <li className='flex items-center'>
-                <a
-                  className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
-                  href='https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index-navbar'
-                >
-                  <i className='text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2' />{' '}
-                  Docs
-                </a>
-              </li>
-            </ul> */}
-
             <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
               <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
                 <li className='flex items-center flex-col lg:flex-row bg-gray-50'>
-                  {/* <HeroDropdown /> */}
                   <Link
                     className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
                     to='header'
@@ -74,7 +63,7 @@ export default function NavBar() {
                     duration={1000}
                   >
                     <span className='text-gray-800 text-sm font-medium hover:text-black leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
-                      {t('ni1')}
+                      {t('navbar.navlink1')}
                     </span>
                   </Link>
                   <Link
@@ -85,7 +74,7 @@ export default function NavBar() {
                     duration={1000}
                   >
                     <span className='text-gray-800 text-sm font-medium hover:text-black  leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
-                      {t('ni2')}
+                      {t('navbar.navlink2')}
                     </span>
                   </Link>
                   <Link
@@ -96,7 +85,7 @@ export default function NavBar() {
                     duration={1000}
                   >
                     <span className='text-gray-800 text-sm font-medium hover:text-black  leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
-                      {t('ni3')}
+                      {t('navbar.navlink3')}
                     </span>
                   </Link>
                   <Link
@@ -107,7 +96,7 @@ export default function NavBar() {
                     duration={1000}
                   >
                     <span className='text-gray-800 text-sm font-medium hover:text-black  leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
-                      {t('ni4')}
+                      {t('navbar.navlink4')}
                     </span>
                   </Link>
                 </li>

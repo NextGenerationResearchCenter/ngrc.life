@@ -22,13 +22,15 @@ export default function Hero() {
                 alt='...'
                 className='sm:ml-2 mb-6 w-82 sm:w-7/12 md:w-10/12'
               />
-              <p className='mt-4 text-base md:text-xl leading-relaxed text-gray-800'>
-                {t('h1')}
+              <p className='mt-4 text-base md:text-xl leading-relaxed text-gray-700'>
+                {/* style={{ fontFamily: 'Mont-Heavy' }} */}
+
+                {t('hero.h1-sub')}
               </p>
               <div className='mt-10'>
                 <Link to='news' spy={true} smooth={true} duration={1000}>
                   <button className='text-md text-white text-sm md:text-lg lg:text-xl font-bold mx-1 px-8 md:px-8 py-4 rounded-full outline-none focus:outline-none mb-1 bg-gray-600 active:bg-gray-700 uppercase shadow hover:shadow-lg ease-linear transition-all duration-150'>
-                    Botanical immune booster
+                    {t('hero.cta-button-1')}
                   </button>
                 </Link>
                 <span onClick={openVideo}>

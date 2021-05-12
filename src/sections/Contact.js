@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Axios, db } from '../firebase/firebaseConfig';
 import { ToastContainer, toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({});
 
   const updateInput = (e) => {
@@ -58,11 +60,10 @@ export default function Contact() {
       <div className='container px-5 py-24 mx-auto flex'>
         <div className='lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md'>
           <h2 className='text-gray-900 text-xl mb-2 font-medium title-font'>
-            Feedback and contact
+            {t('contact.h1')}
           </h2>
           <p className='leading-relaxed mb-5 text-gray-600'>
-            Get in touch with us by filling in the form below and we will get
-            back to you as soon as possible.
+            {t('contact.p1')}
           </p>
           <form onSubmit={handleSubmit}>
             <div className='relative mb-4'>
@@ -70,7 +71,7 @@ export default function Contact() {
                 htmlFor='email'
                 className='leading-7 text-sm text-gray-600'
               >
-                Name
+                {t('contact.form-1')}
               </label>
               <input
                 type='text'
@@ -87,7 +88,7 @@ export default function Contact() {
                 htmlFor='email'
                 className='leading-7 text-sm text-gray-600'
               >
-                Email
+                {t('contact.form-2')}
               </label>
               <input
                 type='email'
@@ -103,7 +104,7 @@ export default function Contact() {
                 htmlFor='message'
                 className='leading-7 text-sm text-gray-600'
               >
-                Message
+                {t('contact.form-3')}
               </label>
               <textarea
                 id='message'
@@ -114,7 +115,7 @@ export default function Contact() {
               ></textarea>
             </div>
             <button className='text-white bg-gray-500 border-0 py-2 px-6 focus:outline-none hover:bg-gray-600 text-lg rounded-full'>
-              Send message
+              {t('contact.form-4')}
             </button>
           </form>
           <ToastContainer
