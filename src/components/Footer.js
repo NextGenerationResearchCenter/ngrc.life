@@ -1,6 +1,8 @@
 // import bg from '../assets/img/ngrc_sep_grey.png';
+// import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  // const { t } = useTranslation();
   return (
     <footer
       className='bg-white dark:bg-gray-800 py-10 bg-footer-design bg-opacity-10'
@@ -16,10 +18,10 @@ export default function Footer() {
             <div className='px-6'>
               <div>
                 <img
-                  src={require('../assets/img/ngrc_logo2.png').default}
+                  src={require('../assets/img/ngrc_logo.png').default}
                   alt='...'
                   // style={{ width: '300px' }}
-                  className='w-36 sm:w-44'
+                  className='w-20 sm:w-36 mb-5'
                 />
                 <span className='text-2xl font-semibold text-gray-700 dark:text-white hover:text-gray-700 dark:hover:text-gray-300'>
                   Next Generation Research Center
@@ -29,10 +31,6 @@ export default function Footer() {
               <p className='max-w-md mt-2 text-gray-500 dark:text-gray-400 font-semibold text-lg'>
                 Bringing science to everyday life
               </p>
-              <span className='block text-md text-gray-600 dark:text-gray-400 hover:underline my-4'>
-                info@ngrc.life
-              </span>
-
               {/* <p>
                 Next Generation Research Center (NGRC) is changing the world. We
                 are bridging the gap between science and everyday life in order
@@ -92,10 +90,10 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className='mt-6 lg:mt-0 lg:flex-1'>
+          {/* <div className='mt-6 lg:mt-0 lg:flex-1'>
             <div className='grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4'>
               <div>
-                {/* <h3 className='text-gray-700 uppercase dark:text-white'>
+                <h3 className='text-gray-700 uppercase dark:text-white'>
                   About
                 </h3>
                 <a
@@ -163,10 +161,10 @@ export default function Footer() {
                   className='block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline'
                 >
                   Meraki UI
-                </a> */}
-              </div>
+                </a>
+              </div> */}
 
-              {/* <div>
+          {/* <div>
                 <h3 className='text-gray-700 uppercase dark:text-white'>
                   Contact
                 </h3>
@@ -176,9 +174,9 @@ export default function Footer() {
                 <span className='block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline'>
                   info@ngrc.life
                 </span>
-              </div> */}
+              </div> 
             </div>
-          </div>
+          </div>*/}
         </div>
 
         <hr className='h-px my-6 bg-gray-300 border-none dark:bg-gray-700' />

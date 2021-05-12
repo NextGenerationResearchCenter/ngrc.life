@@ -1,9 +1,52 @@
 {
-  "ni1": "Hem",
-  "ni2": "Nyheter & press",
-  "ni3": "Om",
-  "ni4": "Kontakt",
-  "contact": "Kontakt",
-  "hero-b1": "Läs mer om oss",
-  "hero-b2": "Kontakta oss"
+  "navbar": {
+    "navlink1": "Hem",
+    "navlink2": "Nyheter",
+    "navlink3": "Om",
+    "navlink4": "Kontakt"
+  },
+  "hero": {
+    "h1-sub": "Next Generation Research Center (NGRC) jobbar för att förena toppmodern vetenskap med det vardagliga livet för att främja en holistisk och hållbar miljö- och hälsoutveckling – för oss och kommande generationer.",
+    "cta-button-1": "Naturlig immuförstärkare"
+  },
+  "about": {
+    "h1-1": "Om Next Generation Research Center",
+    "p1":  {
+      "part1": "NGRC förändrar världen. Vi förenar forskning, hälsa och hållbarhet för att skapa ett samhälle baserat på värdegrunderna compassion och samarbete.",
+      "part2": "Genom att skapa en global gemenskap med yrkesverksamma och entusiaster inom hälsa, skapar vi tillsammans en plattform där alla kan växa genom innovativ utbildning, ledarskap, inter-professionella samarbeten och forskning. Vi stödjer forskning på globala hälsotraditioner och främjar evidensbaserad, hållbar, prisvärd och personcentrerad proaktiv vård."
+    },
+    "h2-1": "Framtiden är nu ― och vi visar vägen",
+    "p2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolores ratione quisquam voluptatibus cumque est dignissimos dolor placeat, error similique neque quidem obcaecati totam voluptates debitis corporis recusandae nemo qui! ",
+    "p-vision": "Att skapa ett samhälle som baseras på värdegrunderna compassion och samarbete, där evidensbaserad proaktiv hälsovård och hållbara lösningar är väl integrerade i samhälle och vardag, och uppmuntrar människor att förändra sina liv.",
+    "p-mission": "Vi stöttar, skapar och främjar forskning ämnad att förbättra välmåendet hos människor och på vår planet – och ser till att världen får reda på det.",
+    "p3": {
+      "part1": "Vi är verksamma i ett flertal områden för att bidra till att skapa ett bättre samhälle på det sätt vi älskar – genom att sprida insikter och kunskap från vetenskapen till allmänheten. NGRC är hjärtat i denna gemenskap, och vi delar med oss av kunskap och kreativitet genom Next Generation Business Center (NGBC) och NGRC Talks.",
+      "part2": "NGBC är en innovativ plattform som stimulerar kreativ utveckling för startups, entreprenörer och företag. Här erbjuds kontorsplatser, business- och marknadsutvecklingsprogram, konferensutrymmen och mycket mer.",
+      "part3": "Låt dig inspireras av de bästa föreläsarna i världen! NGRC Talks är vårt föreläsningsform, där alla har möjlighet att lära sig om det senaste inom life- science, personlig utveckling, miljö, energi och utbildning - direkt från våra globala partners och inspiratörer."
+    }
+  },
+  "news": {
+    "h1": "Naturlig immuförsvarstärkare",
+    "p1": {
+      "part1": "Det senaste året har varit utmanande på många sätt, men nu är en lösning nära. NGRC samarbetar med ett FDA-godkänt forskarlag som har utvecklat ett icke skadligt och naturligt immunförsvarstärkande preparat under mångar år. NGRC har fått förtroendet att distribuera denna växtbaserade immunförsvarsstärkare till marknaden. Samtidigt har ett samarbete etablerats med en regering i ett stort land som är redo att påbörja distributionen av produkten till sina invånare."
+    },
+    "h2-1": "Vill du veta mer om denna naturliga immunförsvarsstärkare?",
+    "h2-1-sub": "För mer information, när den är tillgänglig ― fyll i rutorna nedanför.",
+    "form-field-1": "Fullständigt namn",
+    "form-field-2": "E-post",
+    "form-submit": "Skicka"
+  },
+  "contact": {
+    "h1": "Kontakt och feedback",
+    "p1": "Kom i kontakt med oss igenom att fylla i formuläret nedan så återkommer vi så snabbt som möjligt.",
+    "form-1": "Namn",
+    "form-2": "E-post",
+    "form-3": "Meddelande",
+    "form-4": "Skicka meddelande"
+  },
+  "footer": {
+    "form-2": "E-post",
+    "form-3": "Meddelande",
+    "form-4": "Skicka meddelande"
+  }
 }

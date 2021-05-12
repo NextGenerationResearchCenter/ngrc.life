@@ -5,17 +5,15 @@
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@fortawesome/fontawesome-free": "^5.15.3",
-    "@popperjs/core": "^2.9.2",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
-    "classname": "0.0.0",
     "classnames": "^2.3.1",
     "exit-intent": "^1.1.0",
     "firebase": "^8.4.3",
     "i18next": "^20.2.2",
-    "i18next-browser-languagedetector": "^6.1.0",
+    "i18next-browser-languagedetector": "^6.1.1",
     "i18next-http-backend": "^1.2.2",
     "postcss": "^8.2.13",
     "react": "^17.0.2",
@@ -27,7 +25,6 @@
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.2",
     "react-toastify": "^7.0.4",
-    "reactjs-media": "^1.5.1",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
