@@ -3,14 +3,23 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
 // import IndexDropdown from '../components/IndexDropdown';
 import ReactFlagsSelect from 'react-flags-select';
-
-// import exitIntent from 'exit-intent';
+import bg from "../assets/img/ngrc_sep_grey2.png";
+import exitIntent from 'exit-intent';
+import Modal from 'react-modal';
+import {useLocalStorage} from "../localStorage";
+import {db} from "../firebase/firebaseConfig";
+import {toast} from "react-toastify";
 
 export default function NavBar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const [selected, setSelected] = useState('GB');
   const [lan, setLan] = useState('');
   const { t, i18n } = useTranslation();
+  const [modalIsOpen,setIsOpen] = React.useState(false);
+  const [formData, setFormData] = useState({});
+
+  // Similar to useState but first arg is key to the value in local storage.
+  const [subscriptionStatus, setSubscriptionStatus] = useLocalStorage("subscription", "not-subscribed");
 
   useEffect(() => {
     if (selected === 'GB') {
@@ -19,7 +28,61 @@ export default function NavBar() {
       setLan('sv');
     }
     i18n.changeLanguage(lan);
+
+    Modal.setAppElement('body');
+    // Destroy exit-intent
+    removeExitIntent();
   }, [i18n, lan, selected]);
+
+  // Initialise exit-intent
+  const removeExitIntent = exitIntent({
+    threshold: 15,
+    maxDisplays: 1,
+    eventThrottle: 10,
+    onExitIntent: () => {
+      if (subscriptionStatus==="not-subscribed") {
+        openModal();
+        setSubscriptionStatus("subscribed");
+      }
+    }
+  })
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal(){
+    setIsOpen(false);
+  }
+
+  const updateInput = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    postData();
+    setFormData({
+      name: '',
+      email: '',
+    });
+  };
+  const postData = () => {
+    db.collection('bio_interest')
+        .add({
+          name: formData.name,
+          email: formData.email,
+          time: new Date(),
+        })
+        .then((res) => {
+          toast.success('Success: Thank you for showing your interest!');
+        })
+        .catch((error) => {
+          toast.error('Error: Something went wrong, try again later!');
+        });
+  };
 
   return (
     <>
@@ -157,8 +220,103 @@ export default function NavBar() {
               </li> */}
             </ul>
           </div>
+          <Modal
+              isOpen={modalIsOpen}
+              onRequestClose={closeModal}
+              style={customStyles}
+              contentLabel="Example Modal"
+          >
+            <section
+                className='news text-gray-600 body-font bg-gray-50 py-5 -100'
+                style={{
+                  backgroundImage: `url(${bg})`,
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                }}
+            >
+              <div className='container max-w-6xl px-5 mx-auto'>
+                <div className='flex flex-col text-center w-full lg:mb-12'>
+                  <p className='text-lg xl:text-2xl font-semibold text-gray-900 mt-3'>
+                    {t('navbar.subscribe-title')}
+                  </p>
+                  <p className='text-gray-400 text-md text-gray-500'>
+                    {t('navbar.subscribe-text')}
+                  </p>
+                </div>
+              </div>{' '}
+              <div className='container px-5 mx-auto'>
+                <form onSubmit={handleSubmit}>
+                  <div className='flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:px-0 items-end'>
+                    <div className='relative flex-grow w-full'>
+                      <label
+                          htmlFor='name'
+                          className='leading-7 text-sm text-gray-600'
+                      >
+                        {t('news.form-field-1')}
+                      </label>
+                      <input
+                          type='text'
+                          id='name'
+                          name='name'
+                          className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                          onChange={updateInput}
+                          value={formData.name || ''}
+                      />
+                    </div>
+                  </div>
+                  <div className='flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:px-0 items-end'>
+                    <div className='relative flex-grow w-full'>
+                      <label
+                          htmlFor='email'
+                          className='leading-7 text-sm text-gray-600'
+                      >
+                        {t('news.form-field-2')}
+                      </label>
+                      <input
+                          type='email'
+                          id='email'
+                          name='email'
+                          className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                          onChange={updateInput}
+                          value={formData.email || ''}
+                      />
+                    </div>
+                  </div>
+                  <div className='flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:px-0 items-end mt-6'>
+                    <p className='text-xs text-gray-500 flex lg:w-2/3 w-full mx-auto px-8 sm:space-x-4 sm:px-0 mt-2 text-center invisible'>
+                      (By filling in this form you agree to getting our newsletter)
+                    </p>
+                    <button className='text-white bg-gray-500 border-0 py-2 px-8 focus:outline-none hover:bg-gray-600 rounded-full text-lg m-2 sm:m-0'>
+                      {t('news.form-submit')}
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </Modal>
         </div>
       </nav>
     </>
   );
 }
+
+const customStyles = {
+  overlay:{
+    backgroundColor       : '#000000CC',
+    zIndex                : '99',
+  },
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)',
+    borderTop             : 'solid 5px #DA3A41',
+    borderRight           : 'solid 5px #008FAD',
+    borderBottom          : 'solid 5px #FFB23C',
+    borderLeft            : 'solid 5px #17AB60',
+    borderRadius          : '5px',
+    backgroundColor       : '#FFFFFF'
+  }
+};
