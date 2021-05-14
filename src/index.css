@@ -6,19 +6,16 @@
   font-family: 'MontHeavy';
   src: local('MontHeavy'),
     url('./assets/fonts/Mont/Mont-Heavy.otf') format('truetype');
-  font-weight: normal;
 }
 
 @font-face {
   font-family: 'MontLight';
   src: local('MontLight'),
     url('./assets/fonts/Mont/Mont-ExtraLight.otf') format('truetype');
-  font-weight: normal;
 }
 
 @font-face {
   font-family: 'MontRegular';
   src: local('MontRegular'),
     url('./assets/fonts/Mont/Mont-Regular.otf') format('truetype');
-  font-weight: normal;
 }

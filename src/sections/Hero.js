@@ -1,34 +1,32 @@
 import React, { useState } from 'react';
-// import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
 import ReactPlayer from 'react-player';
 import classnames from 'classnames';
 import { useTranslation } from 'react-i18next';
+import FullLogo from '../assets/img/ngrc_full_logo.png';
 
 export default function Hero() {
+  const { t } = useTranslation();
   const [ShowOrNot, setShowOrNot] = useState('hidden');
   function openVideo() {
     setShowOrNot('');
   }
-  const { t } = useTranslation();
   return (
     <>
-      <section className='header relative pt-0 items-center flex sm:h-100 '>
+      <section className='header relative pt-0 xl:py-15 items-center flex lg:h-screen'>
         <div className='container mx-auto items-center flex flex-wrap'>
           <div className='md:w-8/12 lg:w-6/12 px-4'>
             <div className='md:pt-10 sm:ml-0 my-20 mx-auto text-center md:text-left'>
               <img
-                src={require('../assets/img/full_logo.png').default}
+                src={FullLogo}
                 alt='...'
-                className='sm:ml-2 mb-6 w-82 sm:w-7/12 md:w-10/12'
+                className='sm:ml-2 mb-6 w-82 sm:w-6/12 md:w-10/12'
               />
-              <p className='mt-4 text-base md:text-xl leading-relaxed text-gray-700'>
-                {/* style={{ fontFamily: 'Mont-Heavy' }} */}
-
+              <p className='mt-4 text-base md:text-xl leading-relaxed text-graydark font-montregular'>
                 {t('hero.h1-sub')}
               </p>
               <div className='mt-10'>
-                <Link to='news' spy={true} smooth={true} duration={1000}>
+                <Link to='about' spy={true} smooth={true} duration={1000}>
                   <button className='text-md text-white text-sm md:text-lg lg:text-xl font-bold mx-1 px-8 md:px-8 py-4 rounded-full outline-none focus:outline-none mb-1 bg-gray-600 active:bg-gray-700 uppercase shadow hover:shadow-lg ease-linear transition-all duration-150'>
                     {t('hero.cta-button-1')}
                   </button>

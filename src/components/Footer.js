@@ -23,12 +23,12 @@ export default function Footer() {
                   // style={{ width: '300px' }}
                   className='w-20 sm:w-36 mb-5'
                 />
-                <span className='text-2xl font-semibold text-gray-700 dark:text-white hover:text-gray-700 dark:hover:text-gray-300'>
+                <span className='text-xl md:text-2xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark my-2'>
                   Next Generation Research Center
                 </span>
               </div>
 
-              <p className='max-w-md mt-2 text-gray-500 dark:text-gray-400 font-semibold text-lg'>
+              <p className='text-md md:text-lg font-montregular tracking-tight dark:text-coolGray-50 text-graydark'>
                 Bringing science to everyday life
               </p>
               {/* <p>
@@ -182,7 +182,7 @@ export default function Footer() {
         <hr className='h-px my-6 bg-gray-300 border-none dark:bg-gray-700' />
 
         <div>
-          <p className='text-center text-gray-800 dark:text-white'>
+          <p className='text-center text-graylight dark:text-white font-montregular text-sm md:text-md'>
             © Next Generation Research Center 2020 - All rights reserved
           </p>
         </div>

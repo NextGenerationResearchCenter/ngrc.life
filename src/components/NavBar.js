@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
-// import IndexDropdown from '../components/IndexDropdown';
 import ReactFlagsSelect from 'react-flags-select';
-
-// import exitIntent from 'exit-intent';
+import PictureLogo from '../assets/img/ngrc_logo.png';
 
 export default function NavBar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -24,16 +22,21 @@ export default function NavBar() {
   return (
     <>
       <nav className='top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 navbar-expand-lg bg-gray-50 shadow'>
-        <div className='container px-4 mx-auto flex flex-wrap items-center justify-between py-2'>
+        <div className='container px-4 mx-auto flex flex-wrap items-center justify-between py-1'>
           <div className='w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
             <Link
               to='header'
               spy={true}
               smooth={true}
               duration={1000}
-              className='text-emerald-500 text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase cursor-pointer'
+              className='inline-block whitespace-nowrap cursor-pointer'
             >
-              Next Generation Research Center
+              <img
+                src={PictureLogo}
+                width={40}
+                alt='Logo'
+                className='p-0 m-0'
+              />
             </Link>
             <div className='flex center-items'>
               <button
@@ -56,46 +59,46 @@ export default function NavBar() {
               <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
                 <li className='flex items-center flex-col lg:flex-row bg-gray-50'>
                   <Link
-                    className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                    className='text-md py-2 px-4 block font-medium w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
                     to='header'
                     spy={true}
                     smooth={true}
                     duration={1000}
                   >
-                    <span className='text-gray-800 text-sm font-medium hover:text-black leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
+                    <span className='text-gray-800 text-sm hover:text-black font-medium leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
                       {t('navbar.navlink1')}
                     </span>
                   </Link>
                   <Link
-                    className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                    to='news'
-                    spy={true}
-                    smooth={true}
-                    duration={1000}
-                  >
-                    <span className='text-gray-800 text-sm font-medium hover:text-black  leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
-                      {t('navbar.navlink2')}
-                    </span>
-                  </Link>
-                  <Link
-                    className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                    className='text-md py-2 px-4 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
                     to='about'
                     spy={true}
                     smooth={true}
                     duration={1000}
                   >
-                    <span className='text-gray-800 text-sm font-medium hover:text-black  leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
+                    <span className='text-gray-800 text-sm hover:text-black font-medium leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
+                      {t('navbar.navlink2')}
+                    </span>
+                  </Link>
+                  <Link
+                    className='text-md py-2 px-4 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                    to='news'
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                  >
+                    <span className='text-gray-800 text-sm hover:text-black font-medium leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
                       {t('navbar.navlink3')}
                     </span>
                   </Link>
                   <Link
-                    className='text-md py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                    className=' py-2 px-4 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
                     to='contact'
                     spy={true}
                     smooth={true}
                     duration={1000}
                   >
-                    <span className='text-gray-800 text-sm font-medium hover:text-black  leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
+                    <span className='text-gray-700 text-sm font-medium hover:text-black leading-relaxed whitespace-nowrap uppercase cursor-pointer'>
                       {t('navbar.navlink4')}
                     </span>
                   </Link>
@@ -114,7 +117,7 @@ export default function NavBar() {
                   />
                 </li>
               </ul>
-              <div className='flex bg-gray-50 items-center bg-gray-100 rounded-full'>
+              <div className='flex bg-gray-50 items-center bg-gray-100 rounded'>
                 <li className='flex items-center'>
                   <a
                     className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
@@ -125,7 +128,7 @@ export default function NavBar() {
                     <i className='text-blueGray-400 fab fa-facebook-f text-xl leading-lg ' />
                   </a>
                 </li>
-                <li className='flex items-center bg-gray-100 rounded-full'>
+                <li className='flex items-center bg-gray-100'>
                   <a
                     className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
                     href='https://www.instagram.com/ngrc.life/'
@@ -135,7 +138,7 @@ export default function NavBar() {
                     <i className='text-blueGray-400 fab fa-instagram text-2xl leading-lg' />
                   </a>
                 </li>
-                <li className='flex items-center bg-gray-100 rounded-full'>
+                <li className='flex items-center bg-gray-100'>
                   <a
                     className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
                     href='https://www.linkedin.com/company/ngrc/'
