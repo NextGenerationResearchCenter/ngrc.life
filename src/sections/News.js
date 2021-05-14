@@ -5,10 +5,12 @@ import { useTranslation } from 'react-i18next';
 
 import 'react-toastify/dist/ReactToastify.css';
 import { db } from '../firebase/firebaseConfig';
+import {useLocalStorage} from "../localStorage";
 
 export default function Test() {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({});
+  const [subscriptionStatus, setSubscriptionStatus] = useLocalStorage("subscription", "not-subscribed");
 
   const updateInput = (e) => {
     setFormData({
@@ -23,6 +25,7 @@ export default function Test() {
       name: '',
       email: '',
     });
+    setSubscriptionStatus("subscribed");
   };
   const postData = () => {
     db.collection('bio_interest')
