@@ -7,24 +7,25 @@ export default function About() {
   return (
     <>
       <section className='about dark:bg-coolGray-800 dark:text-coolGray-100 bg-gray-50 py-5 md:py-32'>
-        <div className='max-w-xl p-6 mx-auto space-y-24 lg:px-8 lg:max-w-7xl'>
+        <div className='max-w-xl p-6 mx-auto space-y-16 lg:px-8 lg:max-w-7xl'>
           <div>
-            <h2 className='text-2xl wd:text-3xl font-bold tracking-tight sm:text-4xl dark:text-coolGray-50'>
+            <h2 className='text-2xl md:text-3xl lg:text-4xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark'>
               {t('about.h1-1')}
             </h2>
-            <p className='max-w-5xl mt-4 text-base md:text-lg dark:text-coolGray-400'>
+            <hr className='mb-8 mt-3 border bg-gray-900' />
+            <p className='mt-4 dark:text-coolGray-400 text-graylight text-base md:text-md lg:text-lg font-montregular'>
               {t('about.p1.part1')}
             </p>
-            <p className='max-w-5xl mt-4 text-base md:text-lg dark:text-coolGray-400'>
+            <p className='mt-4 dark:text-coolGray-400 text-graylight text-base md:text-md lg:text-lg font-montregular'>
               {t('about.p1.part2')}
             </p>
           </div>
           <div className='grid lg:gap-8 lg:grid-cols-2 lg:items-center w-100'>
             <div>
-              <h3 className='text-xl md:text-2xl font-bold tracking-tight sm:text-3xl dark:text-coolGray-50'>
+              <h3 className='text-xl md:text-2xl lg:text-2xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark'>
                 {t('about.h2-1')}
               </h3>
-              <p className='text-base md:text-lg dark:text-coolGray-400'>
+              <p className='mt-4 dark:text-coolGray-400 text-graylight text-base md:text-md lg:text-lg font-montregular'>
                 {t('about.p2')}
               </p>
               <div className='mt-12 space-y-12'>
@@ -48,10 +49,10 @@ export default function About() {
                     </div>
                   </div>
                   <div className='ml-4'>
-                    <h4 className='text-gray-800 text-xl md:text-lg font-bold leading-6 dark:text-coolGray-50'>
+                    <h4 className='text-md md:text-lg lg:text-xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark'>
                       Our Vision
                     </h4>
-                    <p className='mt-2 dark:text-coolGray-400 text-base md:text-lg'>
+                    <p className='mt-4 dark:text-coolGray-400 text-graylight text-base md:text-md lg:text-lg font-montregular'>
                       {t('about.p-vision')}
                     </p>
                   </div>
@@ -76,10 +77,10 @@ export default function About() {
                     </div>
                   </div>
                   <div className='ml-4'>
-                    <h4 className='text-gray-800 text-xl md:text-lg font-bold leading-6 dark:text-coolGray-50'>
+                    <h4 className='text-md md:text-lg lg:text-xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark'>
                       Our Mission
                     </h4>
-                    <p className='mt-2 dark:text-coolGray-400 text-base md:text-lg'>
+                    <p className='mt-4 dark:text-coolGray-400 text-graylight text-base md:text-md lg:text-lg font-montregular'>
                       {t('about.p-mission')}
                     </p>
                   </div>
@@ -95,17 +96,17 @@ export default function About() {
               />
             </div>
           </div>
-          <div>
-            <p className='max-w-5xl mt-3 lg:mt-6 text-base md:text-lg dark:text-coolGray-400'>
-              {t('about.p3.part1')}
-            </p>
-            <p className='max-w-5xl mt-3 lg:mt-6 text-base md:text-lg dark:text-coolGray-400'>
-              {t('about.p3.part2')}
-            </p>
-            <p className='max-w-5xl mt-3 lg:mt-6 text-base md:text-lg dark:text-coolGray-400'>
-              {t('about.p3.part3')}
-            </p>
-          </div>
+        </div>
+        <div className='max-w-xl mx-auto lg:max-w-7xl  p-6'>
+          <p className='mt-4 dark:text-coolGray-400 text-graylight text-base md:text-md lg:text-lg font-montregular'>
+            {t('about.p3.part1')}
+          </p>
+          <p className='mt-4 dark:text-coolGray-400 text-graylight text-base md:text-md lg:text-lg font-montregular'>
+            {t('about.p3.part2')}
+          </p>
+          <p className='mt-4 dark:text-coolGray-400 text-graylight text-base md:text-md lg:text-lg font-montregular'>
+            {t('about.p3.part3')}
+          </p>
         </div>
       </section>
     </>

@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './i18n';
 import App from './App';
 
-import './assets/css/tailwind.css';
+import './index.css';
+// import '../tailwind';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 ReactDOM.render(
