@@ -55,7 +55,7 @@ export default function Test() {
         pauseOnHover
       />
       <section
-        className='news text-gray-600 body-font bg-gray-50 py-20'
+        className='news text-gray-600 body-font bg-gray-50 py-5 md:py-32 leading-relaxed'
         style={{
           backgroundImage: `url(${bg})`,
           backgroundSize: 'cover',
@@ -64,28 +64,31 @@ export default function Test() {
       >
         <div className='container max-w-6xl px-5 py-8 mx-auto'>
           <div className='flex flex-col text-center w-full lg:mb-12'>
-            <h2 className='text-2xl lg:text-5xl font-bold tracking-tight sm:text-4xl dark:text-coolGray-50 lg:mb-8 lg:pt-12 text-gray-900'>
-              {/* <i className='fas fa-infinity text-gray-600'></i>  */}
+            <h2 className='text-2xl md:text-3xl lg:text-4xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark text-left'>
               {t('news.h1')}
             </h2>
-            <p className='mt-2 dark:text-coolGray-400 text-base md:text-lg'>
+            <hr className='mb-8 mt-3 border bg-gray-900' />
+            <h2 className='text-xl md:text-2xl lg:text-3xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark'>
+              {t('news.h2')}
+            </h2>
+            <p className='mt-4 dark:text-coolGray-400 text-graylight text-base md:text-lg font-montregular'>
               {t('news.p1.part1')}
             </p>
-            <p className='text-lg xl:text-2xl font-semibold mt-16 text-gray-900 mt-3'>
+            <p className='text-lg xl:text-xl mt-16 text-graylight font-montheavy'>
               {t('news.h2-1')}
             </p>
-            <p className='text-gray-400 text-md text-gray-500'>
+            <p className='text-graylight text-md lg:text-lg font-montregular mt-1 font-base'>
               {t('news.h2-1-sub')}
             </p>
           </div>
         </div>{' '}
         <div className='container px-5 mx-auto'>
           <form onSubmit={handleSubmit}>
-            <div className='flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:px-0 items-end'>
+            <div className='flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:px-0 items-end mb-10'>
               <div className='relative flex-grow w-full'>
                 <label
                   htmlFor='name'
-                  className='leading-7 text-sm text-gray-600'
+                  className='leading-7 text-sm text-graylight font-montregular'
                 >
                   {t('news.form-field-1')}
                 </label>
@@ -101,7 +104,7 @@ export default function Test() {
               <div className='relative flex-grow w-full'>
                 <label
                   htmlFor='email'
-                  className='leading-7 text-sm text-gray-600'
+                  className='leading-7 text-sm text-graylight font-montregular'
                 >
                   {t('news.form-field-2')}
                 </label>

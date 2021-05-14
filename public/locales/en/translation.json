@@ -1,26 +1,26 @@
 {
   "navbar": {
     "navlink1": "Home",
-    "navlink2": "News",
-    "navlink3": "About",
-    "navlink4": "Contact",
+    "navlink2": "About",
+    "navlink3": "News",
+    "navlink4": "Contact"
     "subscribe-title": "Before you go",
     "subscribe-text": "You don't want to miss signing up on our newsletter, we promise to never spam you!"
   },
   "hero": {
-    "h1-sub": "Next Generation Research Center (NGRC) is bridging the gap between science and everyday life to support a society based upon the values of compassion and cooperation. We promote science based holistic health and environmental sustainability for us - and generations to come.",
-    "cta-button-1": "BOTANICAL IMMUNE BOOSTER"
+    "h1-sub": "Next Generation Research Center (NGRC) is bridging the gap between science and everyday life. We promote holistic health supported by science and environmental sustainability for us - and generations to come.",
+    "cta-button-1": "Read more about us"
   },
   "about": {
-    "h1-1": "About Next Generation Research Center",
+    "h1-1": "About us",
     "p1":  {
       "part1": "Next Generation Research Center (NGRC) is changing the world. We are bridging the gap between science and everyday life to support a society based upon the values of compassion and cooperation.",
-      "part2": "By engaging a global community with health professionals and health seekers, we co-create a platform from which everyone can thrive through innovative education, leadership, inter- professional collaboration, and research. We embrace global research-based traditions and will promote the delivery of evidence-based, sustainable, affordable person-centered care."
+      "part2": "By engaging a global community with health professionals and health seekers, we co-create a platform from which everyone can thrive through innovative education, leadership, inter- professional collaboration, and research. We embrace global research-based healing traditions and promote evidence-based, sustainable, affordable person-centered care."
     },
     "h2-1": "The future is now ― and we are leading the way",
     "p2": "By supporting science in the fields of Life Science, Education, Environment and Energy, and implementing and sharing the knowledge in an easy-to-digest manner, we promote a holistic health approach and environmental sustainability for us, and generations to come.",
-    "p-vision": "To create a society based upon the values of compassion and cooperation, where evidence-based pro-health and environmentally sustainable solutions are well integrated into the system and in everyday life, and encourages the people to feel empowered to change their lives.",
-    "p-mission": "To support, create and promote science targeted to benefit the wellbeing of the people and our planet - and make sure the world hears about it.",
+    "p-vision": "We transform science into everyday life globally",
+    "p-mission": "We support, create and promote a society based upon the values of compassion and cooperation. We strive to develop consciousness for healthy relationships between humans, our society system and the nature, through research-based solutions and business guided by our values.",
     "p3": {
       "part1": "We are operating in multiple fields to serve humanity in the way we love – by spreading science based knowledge and insights to the masses. NGRC is the heart of this new community, and we will promote the sharing of knowledge and creativity through our Next Generation Business Center (NGBC) and NGRC Talks.",
       "part2": "NGBC is a support function for Startups, Sole Traders and businesses, and offers office space, business and marketing training programs and much more.",
@@ -28,7 +28,8 @@
     }
   },
   "news": {
-    "h1": "Botanical Immune Booster",
+    "h1": "News",
+    "h2": "Botanical Immune Booster",
     "p1": {
       "part1": "This last year has left us all very challenged in everyday life. However, a promising solution is near. NGRC has reached an agreement with a highly proficient FDA- approved science team, which has been developing a non-invasive Botanical Immune Booster for several years. In collaboration with this science team ― NGRC will distribute the natural protection to the market! Moreover, in-depth discussions are being conducted with the government in a large country that is ready to initiate the launch of this natural method to its citizens."
     },

@@ -25,8 +25,8 @@ function App() {
     <Router>
       <NavBar />
       <Hero />
-      <News />
       <About />
+      <News />
       {/* <Section /> */}
       {/* <Testomomials /> */}
       <Contact />

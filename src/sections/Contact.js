@@ -59,17 +59,17 @@ export default function Contact() {
       </div>
       <div className='container px-5 py-24 mx-auto flex'>
         <div className='lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md'>
-          <h2 className='text-gray-900 text-xl mb-2 font-medium title-font'>
+          <h2 className='text-xl md:text-2xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark'>
             {t('contact.h1')}
           </h2>
-          <p className='leading-relaxed mb-5 text-gray-600'>
+          <p className='my-4 dark:text-coolGray-400 text-graylight text-base lg:text-md font-montregular'>
             {t('contact.p1')}
           </p>
           <form onSubmit={handleSubmit}>
             <div className='relative mb-4'>
               <label
                 htmlFor='email'
-                className='leading-7 text-sm text-gray-600'
+                className='leading-7 text-sm text-graylight font-montregular'
               >
                 {t('contact.form-1')}
               </label>
@@ -86,7 +86,7 @@ export default function Contact() {
             <div className='relative mb-4'>
               <label
                 htmlFor='email'
-                className='leading-7 text-sm text-gray-600'
+                className='leading-7 text-sm text-graylight font-montregular'
               >
                 {t('contact.form-2')}
               </label>
@@ -102,7 +102,7 @@ export default function Contact() {
             <div className='relative mb-4'>
               <label
                 htmlFor='message'
-                className='leading-7 text-sm text-gray-600'
+                className='leading-7 text-sm text-graylight font-montregular'
               >
                 {t('contact.form-3')}
               </label>
