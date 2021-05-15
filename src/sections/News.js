@@ -5,12 +5,15 @@ import { useTranslation } from 'react-i18next';
 
 import 'react-toastify/dist/ReactToastify.css';
 import { db } from '../firebase/firebaseConfig';
-import {useLocalStorage} from "../localStorage";
+import { useLocalStorage } from '../localStorage';
 
 export default function Test() {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({});
-  const [subscriptionStatus, setSubscriptionStatus] = useLocalStorage("subscription", "not-subscribed");
+  const [subscriptionStatus, setSubscriptionStatus] = useLocalStorage(
+    'subscription',
+    'not-subscribed'
+  );
 
   const updateInput = (e) => {
     setFormData({
@@ -25,7 +28,7 @@ export default function Test() {
       name: '',
       email: '',
     });
-    setSubscriptionStatus("subscribed");
+    setSubscriptionStatus('subscribed');
   };
   const postData = () => {
     db.collection('bio_interest')
@@ -62,7 +65,7 @@ export default function Test() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className='container max-w-6xl px-5 py-8 mx-auto'>
+        <div className='container max-w-7xl px-5 py-8 mx-auto'>
           <div className='flex flex-col text-center w-full lg:mb-12'>
             <h2 className='text-2xl md:text-3xl lg:text-4xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark text-left'>
               {t('news.h1')}
