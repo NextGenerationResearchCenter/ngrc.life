@@ -20,6 +20,7 @@
     "react-flags-select": "^2.1.2",
     "react-i18next": "^11.8.15",
     "react-modal": "^3.13.1",
+    "react-modal-video": "^1.2.6",
     "react-player": "^2.9.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",

@@ -1,6 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import '../node_modules/react-modal-video/css/modal-video.min.css';
 
 @font-face {
   font-family: 'MontHeavy';

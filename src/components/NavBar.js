@@ -94,7 +94,7 @@ export default function NavBar() {
         <div className='container px-4 mx-auto flex flex-wrap items-center justify-between py-1'>
           <div className='items-center w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
             <Link
-              to='header'
+              to='hero'
               spy={true}
               smooth={true}
               duration={1000}
@@ -141,7 +141,7 @@ export default function NavBar() {
                 <li className='flex items-center flex-col lg:flex-row text-center'>
                   <Link
                     className='text-md py-2 px-4 block font-medium w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                    to='header'
+                    to='hero'
                     spy={true}
                     smooth={true}
                     duration={1000}

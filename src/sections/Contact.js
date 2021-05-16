@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Axios, db } from '../firebase/firebaseConfig';
 import { ToastContainer, toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
+import IntroVideo from '../components/IntroVideo';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -65,6 +66,7 @@ export default function Contact() {
           <p className='my-4 dark:text-coolGray-400 text-graylight text-base lg:text-md font-montregular'>
             {t('contact.p1')}
           </p>
+
           <form onSubmit={handleSubmit}>
             <div className='relative mb-4'>
               <label
