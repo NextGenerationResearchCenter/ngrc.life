@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Axios, db } from '../firebase/firebaseConfig';
 import { ToastContainer, toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
-import IntroVideo from '../components/IntroVideo';
 
 export default function Contact() {
   const { t } = useTranslation();

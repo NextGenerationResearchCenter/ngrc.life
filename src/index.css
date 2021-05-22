@@ -20,3 +20,15 @@
   src: local('MontRegular'),
     url('./assets/fonts/Mont/Mont-Regular.otf') format('truetype');
 }
+
+/* Dropdown Menu */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Navbar scoll classes */
+.nav-scrolled {
+  background-color: red;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}

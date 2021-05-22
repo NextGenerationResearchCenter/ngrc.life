@@ -1,11 +1,11 @@
 {
   "navbar": {
     "navlink1": "Hem",
-    "navlink2": "Nyheter",
-    "navlink3": "Om",
+    "navlink2": "Om",
+    "navlink3": "Nyheter",
     "navlink4": "Kontakt",
-    "subscribe-title": "Innan du går",
-    "subscribe-text": "Du vill inte missa registreringen på vårt nyhetsbrev, vi lovar att aldrig skräpposta dig!"
+    "subscribe-title": "Innan du lämnar",
+    "subscribe-text": "Vill du inte missa registreringen på vårt nyhetsbrev, vi lovar att aldrig skicka någon skräppost!"npm
   },
   "hero": {
     "h1-sub": "Next Generation Research Center förenar toppmodern vetenskap med det vardagliga livet för att främja en holistisk och hållbar miljö- och hälsoutveckling – för oss och kommande generationer.",

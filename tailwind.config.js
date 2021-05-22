@@ -7,6 +7,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
 
   theme: {
+    variants: {
+      display: ['responsive', 'group-hover', 'group-focus'],
+    },
     extend: {
       fontFamily: {
         montheavy: ['montheavy'],
