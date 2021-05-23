@@ -4,16 +4,12 @@ import { useTranslation } from 'react-i18next';
 const LanguageDropDown = () => {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (code) => {
-    i18n.changeLanguage(code);
-  };
-
   return (
     <div class='dropdown inline-block relative'>
-      <button class='text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center text-center align-baseline'>
-        <div className='flex items-center'>
-          <i class='fas fa-globe'></i>
-          <span class='mx-2 text-xl'>{i18n.language}</span>
+      <button class='text-gray-700 font-semibold py-2 pl-2 lg:px-4 rounded inline-flex items-center text-center align-baseline'>
+        <div className='flex items-center text-xl'>
+          <i className='fas fa-globe mr-2 lg:mr-1' />
+          <span class='hidden lg:block mx-2 text-xl'>{i18n.language}</span>
           <svg
             class='fill-current h-4 w-4'
             xmlns='http://www.w3.org/2000/svg'
@@ -27,13 +23,13 @@ const LanguageDropDown = () => {
       <ul class='dropdown-menu absolute hidden text-gray-700 pt-1'>
         <li
           class='rounded-t hover:bg-gray-200 py-3 px-5 block whitespace-no-wrap cursor-pointer'
-          onClick={() => changeLanguage('en')}
+          onClick={() => i18n.changeLanguage('en')}
         >
           EN
         </li>
         <li
           class='rounded-t hover:bg-gray-200 py-3 px-5 block whitespace-no-wrap cursor-pointer'
-          onClick={() => changeLanguage('sv')}
+          onClick={() => i18n.changeLanguage('sv')}
         >
           SV
         </li>

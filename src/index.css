@@ -28,7 +28,8 @@
 
 /* Navbar scoll classes */
 .nav-scrolled {
-  background-color: red;
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
+  background-color: white;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 1px solid lightgray;
 }

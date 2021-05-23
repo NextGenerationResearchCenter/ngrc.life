@@ -8,11 +8,16 @@ import { useLocalStorage } from '../localStorage';
 import { db } from '../firebase/firebaseConfig';
 import { toast } from 'react-toastify';
 import PictureLogo from '../assets/img/ngrc_logo.png';
-import LanguageDropDown from '../assets/LanguageDropDown';
+import LanguageDropDown from './LanguageDropDown';
+import areas from '../assets/img/areas.png';
 
 export default function NavBar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
+
+  // Navbar scroll hooks
   const [navbarVersion, setNavbarVersion] = useState('bg-transparent');
+  const [logoShow, setLogoShow] = useState('hidden');
+  const [areasWidth, setAreasWidth] = useState('max-w-xl');
 
   const { t } = useTranslation();
 
@@ -33,13 +38,33 @@ export default function NavBar() {
         document.body.scrollTop > 150
       ) {
         setNavbarVersion('nav-scrolled');
+        setLogoShow('');
+        setAreasWidth('max-w-lg');
       } else if (
         document.documentElement.scrollTop < 151 ||
         document.body.scrollTop < 151
       ) {
         setNavbarVersion('bg-transparent');
+        setLogoShow('hidden');
+        setAreasWidth('max-w-xl');
       }
     };
+
+    Modal.setAppElement('body');
+
+    // switch (i18n.language) {
+    //   case sv:
+    //     setLang('Swedish');
+    //     break;
+    //   case en:
+    //     setLang('English');
+    //     break;
+    //   default:
+    //     setLang('English');
+    // }
+
+    // Destroy exit-intent
+    removeExitIntent();
 
     updateNavbar();
 
@@ -48,11 +73,7 @@ export default function NavBar() {
     return function cleanup() {
       window.removeEventListener('scroll', updateNavbar);
     };
-
-    Modal.setAppElement('body');
-    // Destroy exit-intent
-    removeExitIntent();
-  }, []);
+  });
 
   // Initialise exit-intent
   const removeExitIntent = exitIntent({
@@ -108,9 +129,9 @@ export default function NavBar() {
   return (
     <>
       <nav
-        className={`${navbarVersion} top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 navbar-expand-lg bg-transparent py-5`}
+        className={`${navbarVersion} top-0 fixed z-50 w-full flex flex-wrap items-center justify-between navbar-expand-sm bg-transparent py-1 lg:py-8 transition duration-500 ease-in-out`}
       >
-        <div className='container px-10 mx-auto flex flex-wrap items-center justify-between'>
+        <div className='container lg:px-10 mx-auto flex flex-wrap items-center justify-between'>
           <div className='items-center w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
             <Link
               to='hero'
@@ -119,11 +140,20 @@ export default function NavBar() {
               duration={1000}
               className='cursor-pointer'
             >
-              {/* <img
-                src={PictureLogo}
-                style={{ width: '55px', height: '55px' }}
-                alt='Logo'
-              /> */}
+              <div className='pl-2 flex items-center'>
+                <span className={`${logoShow} mr-5`}>
+                  <img
+                    src={PictureLogo}
+                    style={{ width: '50px', height: '50px' }}
+                    alt='Logo'
+                  />
+                </span>
+                <span
+                  className={`xl:${areasWidth} hidden sm:block lg:max-w-md max-w-sm`}
+                >
+                  <img src={areas} alt='test' className='w-full' />
+                </span>
+              </div>
             </Link>
             <div className='flex items-center'>
               <span className='lg:hidden'>
@@ -158,7 +188,7 @@ export default function NavBar() {
                     duration={1000}
                   >
                     <span
-                      className='text-graydark text-md hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
+                      className='text-graydark text-md xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
                       onClick={() => setNavbarOpen(!navbarOpen)}
                     >
                       {t('navbar.navlink1')}
@@ -172,7 +202,7 @@ export default function NavBar() {
                     duration={1000}
                   >
                     <span
-                      className='text-graydark text-md hover:text-black font-montregular leading-relaxed whitespace-nowrap  cursor-pointer'
+                      className='text-graydark text-md xl:text-lg hover:text-black font-montregular leading-relaxed whitespace-nowrap  cursor-pointer'
                       onClick={() => setNavbarOpen(!navbarOpen)}
                     >
                       {t('navbar.navlink2')}
@@ -186,7 +216,7 @@ export default function NavBar() {
                     duration={1000}
                   >
                     <span
-                      className='text-graydark text-md hover:text-black font-montregular leading-relaxed whitespace-nowrap  cursor-pointer'
+                      className='text-graydark text-md xl:text-lg hover:text-black font-montregular leading-relaxed whitespace-nowrap  cursor-pointer'
                       onClick={() => setNavbarOpen(!navbarOpen)}
                     >
                       {t('navbar.navlink3')}
@@ -200,14 +230,14 @@ export default function NavBar() {
                     duration={1000}
                   >
                     <span
-                      className='text-graydark text-md font-montregular hover:text-black leading-relaxed whitespace-nowrap cursor-pointer'
+                      className='text-graydark text-md xl:text-lg font-montregular hover:text-black leading-relaxed whitespace-nowrap cursor-pointer'
                       onClick={() => setNavbarOpen(!navbarOpen)}
                     >
                       {t('navbar.navlink4')}
                     </span>
                   </Link>
                 </li>
-                <li className='px-6 py-3 lg:py-0 hidden lg:block'>
+                <li className='px-0 xl:px-6 py-3 lg:py-0 hidden lg:block'>
                   <LanguageDropDown />
                 </li>
               </ul>
