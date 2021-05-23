@@ -43,7 +43,7 @@ export default function Contact() {
       });
   };
   return (
-    <section className='text-gray-600 body-font relative contact'>
+    <section className='text-gray-600 body-font relative contact py-14'>
       <div className='absolute inset-0 bg-gray-300'>
         <iframe
           width='100%'

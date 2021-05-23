@@ -65,8 +65,8 @@ export default function Test() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className='container max-w-7xl px-5 py-8 mx-auto'>
-          <div className='flex flex-col text-center w-full lg:mb-12'>
+        <div className='container max-w-7xl px-5 py-14 mx-auto'>
+          <div className='flex flex-col lg:text-center w-full lg:mb-12'>
             <h2 className='text-2xl md:text-3xl lg:text-4xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark text-left'>
               {t('news.h1')}
             </h2>
