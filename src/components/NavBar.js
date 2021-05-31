@@ -18,6 +18,8 @@ export default function NavBar() {
   const [navbarVersion, setNavbarVersion] = useState('bg-transparent');
   const [logoShow, setLogoShow] = useState('hidden');
   const [areasWidth, setAreasWidth] = useState('max-w-xl');
+  const [fourAreasSmall, setFourAreasSmall] = useState('');
+  const [fourAreasSmallMenu, setFourAreasSmallMenu] = useState('');
 
   const { t } = useTranslation();
 
@@ -40,6 +42,8 @@ export default function NavBar() {
         setNavbarVersion('nav-scrolled');
         setLogoShow('');
         setAreasWidth('max-w-lg');
+        setFourAreasSmall('hidden');
+        setFourAreasSmallMenu('block');
       } else if (
         document.documentElement.scrollTop < 151 ||
         document.body.scrollTop < 151
@@ -47,6 +51,8 @@ export default function NavBar() {
         setNavbarVersion('bg-transparent');
         setLogoShow('hidden');
         setAreasWidth('max-w-xl');
+        setFourAreasSmall('block');
+        setFourAreasSmallMenu('hidden');
       }
     };
 
@@ -141,24 +147,50 @@ export default function NavBar() {
               className='cursor-pointer'
             >
               <div className='pl-2 flex items-center'>
-                <span className={`${logoShow} mr-5`}>
-                  <img
-                    src={PictureLogo}
-                    style={{ width: '50px', height: '50px' }}
-                    alt='Logo'
-                  />
-                </span>
-                <span
-                  className={`xl:${areasWidth} hidden sm:block lg:max-w-md max-w-sm`}
-                >
-                  <img src={areas} alt='test' className='w-full' />
-                </span>
+                <div className='flex'>
+                  <div>
+                    <div className='flex items-center'>
+                      <span className={`${logoShow} mr-8`}>
+                        <img
+                          src={PictureLogo}
+                          style={{ width: '45px', height: '45px' }}
+                          alt='Logo'
+                        />
+                      </span>
+
+                      <span
+                        className={`xl:${areasWidth} hidden sm:block pl-10 md:pl-8 lg:pl-0 max-w-md`}
+                      >
+                        <img src={areas} alt='The four areas' />
+                      </span>
+                      {/* <span className=' text-graydark font-montregular text-md truncate ml-2 four-areas'>
+                      <span className='border-b-4 border-red-500'>
+                        Life Science
+                      </span>
+                      {'  '}-{'  '}
+                      <span className='border-b-4 border-green-500'>
+                        Enviroment
+                      </span>
+                      {'  '}-{'  '}
+                      <span className='border-b-4 border-yellow-500'>
+                        Energy
+                      </span>
+                      {'  '}-{'  '}
+                      <span className='border-b-4 border-blue-500'>
+                        Education
+                      </span>
+                    </span> */}
+                    </div>
+                  </div>
+                </div>
               </div>
             </Link>
+
             <div className='flex items-center'>
               <span className='lg:hidden'>
                 <LanguageDropDown />
               </span>
+
               <div className='flex center-items'>
                 <button
                   className='cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none'
@@ -170,6 +202,11 @@ export default function NavBar() {
               </div>
             </div>
           </div>
+          {/*Four areas compact view*/}
+          <div className={`${fourAreasSmall} sm:hidden w-full px-4 py-1`}>
+            <img src={areas} alt='Four areas' />
+          </div>
+
           <div
             className={
               'lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none' +
@@ -236,6 +273,11 @@ export default function NavBar() {
                       {t('navbar.navlink4')}
                     </span>
                   </Link>
+                  <div
+                    className={`${fourAreasSmallMenu} sm:hidden w-full px-4 py-4`}
+                  >
+                    <img src={areas} alt='Four areas' />
+                  </div>
                 </li>
                 <li className='px-0 xl:px-6 py-3 lg:py-0 hidden lg:block'>
                   <LanguageDropDown />
@@ -262,7 +304,7 @@ export default function NavBar() {
                   <p className='text-lg xl:text-2xl font-semibold text-gray-900 mt-3'>
                     {t('navbar.subscribe-title')}
                   </p>
-                  <p className='text-gray-400 text-md text-gray-500'>
+                  <p className='text-md text-gray-500'>
                     {t('navbar.subscribe-text')}
                   </p>
                 </div>

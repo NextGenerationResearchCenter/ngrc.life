@@ -10,6 +10,9 @@ module.exports = {
     variants: {
       display: ['responsive', 'group-hover', 'group-focus'],
     },
+    letterSpacing: {
+      ultrawide: '.35em',
+    },
     extend: {
       fontFamily: {
         montheavy: ['montheavy'],

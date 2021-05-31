@@ -31,5 +31,10 @@
   background-color: white;
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
-  border-bottom: 1px solid lightgray;
+  /* border-bottom: 1px solid lightgray; */
+}
+
+/* Navbar 4Area Text */
+.four-areas {
+  letter-spacing: 0.25em;
 }

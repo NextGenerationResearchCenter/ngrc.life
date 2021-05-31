@@ -23,7 +23,7 @@ export default function Footer() {
                   // style={{ width: '300px' }}
                   className='w-20 sm:w-36 mb-5'
                 />
-                <span className='text-xl md:text-2xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark my-2'>
+                <span className='text-md md:text-2xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark my-2'>
                   Next Generation Research Center
                 </span>
               </div>
