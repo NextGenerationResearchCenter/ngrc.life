@@ -24,13 +24,13 @@ const LanguageDropDown = () => {
 
       <ul className='dropdown-menu absolute hidden text-gray-700 pt-1'>
         <li
-          className='rounded-t hover:bg-gray-200 py-3 px-5 block whitespace-no-wrap cursor-pointer'
+          className='rounded-t hover:bg-gray-200 bg-white py-3 px-5 block whitespace-no-wrap cursor-pointer'
           onClick={() => i18n.changeLanguage('en')}
         >
           EN
         </li>
         <li
-          className='rounded-t hover:bg-gray-200 py-3 px-5 block whitespace-no-wrap cursor-pointer'
+          className='rounded-t hover:bg-gray-200 bg-white py-3 px-5 block whitespace-no-wrap cursor-pointer'
           onClick={() => i18n.changeLanguage('sv')}
         >
           SV
