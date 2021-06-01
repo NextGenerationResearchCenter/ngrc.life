@@ -23,6 +23,8 @@ module.exports = {
         graydark: '#4D4D4D',
         graymedium: '#666666',
         graylight: '#4D4D4D',
+        ngrcdarkred: '#AF3533',
+        ngrclightred: '#C83D3C',
       },
     },
   },

@@ -6,7 +6,10 @@ export default function About() {
   const { t } = useTranslation();
   return (
     <>
-      <section className='about dark:bg-coolGray-800 dark:text-coolGray-100 bg-gray-50 py-14 md:py-32'>
+      <section
+        className='about dark:bg-coolGray-800 dark:text-coolGray-100 bg-gray-50 py-14 md:py-32'
+        id='about'
+      >
         <div className='max-w-xl p-6 mx-auto space-y-16 lg:px-8 lg:max-w-7xl'>
           <div>
             <h2 className='text-2xl md:text-3xl lg:text-4xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark'>

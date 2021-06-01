@@ -1,12 +1,11 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import firebase from 'firebase';
 
 import NavBar from './components/NavBar';
-import Hero from './sections/Hero';
-import Contact from './sections/Contact';
 import Footer from './components/Footer';
-import About from './sections/About';
-import News from './sections/News';
+import HeroSection from './views/HeroSection';
+import ResearchCenter from './views/ResearchCenter';
 // import Section from './sections/Section';
 // import Testomomials from './sections/Testomomials';
 
@@ -24,13 +23,10 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <Hero />
-      <About />
-      <News />
-      {/* <Section /> */}
-      {/* <Testomomials /> */}
-      <Contact />
-
+      <Switch>
+        <Route path='/' exact component={HeroSection} />
+        <Route path='/research-center' component={ResearchCenter} />
+      </Switch>
       <Footer />
     </Router>
   );

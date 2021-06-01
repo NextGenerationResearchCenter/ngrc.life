@@ -18,7 +18,7 @@ export default function Hero() {
             {/* <h2 className='font-montheavy text-4xl text-graydark'>
               Next Generation Research Center
             </h2> */}
-            <p className='pl-4 pt-2 text-sm lg:text-md lg:text-xl leading-relaxed text-graydark font-montregular text-left'>
+            <p className='pl-4 pt-2 text-sm lg:text-lg xl:text-xl leading-relaxed text-graydark font-montregular text-left'>
               {t('hero.h1-sub')}
             </p>
             <div className='pl-2 mt-5 sm:mt-10'>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
+import { Link as DomLink } from 'react-router-dom';
 import bg from '../assets/img/ngrc_sep_grey2.png';
 import exitIntent from 'exit-intent';
 import Modal from 'react-modal';
@@ -10,6 +11,7 @@ import { toast } from 'react-toastify';
 import PictureLogo from '../assets/img/ngrc_logo.png';
 import LanguageDropDown from './LanguageDropDown';
 import areas from '../assets/img/areas.png';
+import { HashLink } from 'react-router-hash-link';
 
 export default function NavBar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -57,17 +59,6 @@ export default function NavBar() {
     };
 
     Modal.setAppElement('body');
-
-    // switch (i18n.language) {
-    //   case sv:
-    //     setLang('Swedish');
-    //     break;
-    //   case en:
-    //     setLang('English');
-    //     break;
-    //   default:
-    //     setLang('English');
-    // }
 
     // Destroy exit-intent
     removeExitIntent();
@@ -159,7 +150,7 @@ export default function NavBar() {
                       </span>
 
                       <span
-                        className={`xl:${areasWidth} hidden sm:block pl-10 md:pl-8 lg:pl-0 max-w-md`}
+                        className={`xl:${areasWidth} hidden sm:block pl-10 md:pl-10 max-w-sm`}
                       >
                         <img src={areas} alt='The four areas' />
                       </span>
@@ -217,9 +208,26 @@ export default function NavBar() {
             <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
               <ul className='flex flex-col pt-3 lg:pt-0 lg:mt-0 lg:flex-row list-none lg:ml-auto'>
                 <li className='flex items-center flex-col lg:flex-row text-center'>
-                  <Link
-                    className='py-2 px-4 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                  {/* <Link
+                    className='py-2 px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
                     to='hero'
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                  >
+                    <span
+                      className='text-graydark text-sm xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
+                      onClick={() => setNavbarOpen(!navbarOpen)}
+                    >
+                      {t('navbar.navlink1')}
+                    </span>
+                  </Link> */}
+                  <HashLink smooth to='/#about'>
+                    Section Two
+                  </HashLink>
+                  <Link
+                    className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                    to='/about'
                     spy={true}
                     smooth={true}
                     duration={1000}
@@ -228,58 +236,56 @@ export default function NavBar() {
                       className='text-graydark text-md xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
                       onClick={() => setNavbarOpen(!navbarOpen)}
                     >
-                      {t('navbar.navlink1')}
-                    </span>
-                  </Link>
-                  <Link
-                    className='py-2 px-4 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                    to='about'
-                    spy={true}
-                    smooth={true}
-                    duration={1000}
-                  >
-                    <span
-                      className='text-graydark text-md xl:text-lg hover:text-black font-montregular leading-relaxed whitespace-nowrap  cursor-pointer'
-                      onClick={() => setNavbarOpen(!navbarOpen)}
-                    >
                       {t('navbar.navlink2')}
                     </span>
                   </Link>
+
                   <Link
-                    className='py-2 px-4 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                    className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
                     to='news'
                     spy={true}
                     smooth={true}
                     duration={1000}
                   >
                     <span
-                      className='text-graydark text-md xl:text-lg hover:text-black font-montregular leading-relaxed whitespace-nowrap  cursor-pointer'
+                      className='text-graydark text-md xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
                       onClick={() => setNavbarOpen(!navbarOpen)}
                     >
                       {t('navbar.navlink3')}
                     </span>
                   </Link>
                   <Link
-                    className='py-2 px-4 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                    className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
                     to='contact'
                     spy={true}
                     smooth={true}
                     duration={1000}
                   >
                     <span
-                      className='text-graydark text-md xl:text-lg font-montregular hover:text-black leading-relaxed whitespace-nowrap cursor-pointer'
+                      className='text-graydark text-md xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
                       onClick={() => setNavbarOpen(!navbarOpen)}
                     >
                       {t('navbar.navlink4')}
                     </span>
                   </Link>
+                  <DomLink
+                    className='py-2 px-4 xl:px-5 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                    to='/research-center'
+                  >
+                    <span
+                      className='text-ngrcdarkred text-md xl:text-lg hover:text-red-400 leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
+                      onClick={() => setNavbarOpen(!navbarOpen)}
+                    >
+                      {t('navbar.navlink5')}
+                    </span>
+                  </DomLink>
                   <div
-                    className={`${fourAreasSmallMenu} sm:hidden w-full px-4 py-4`}
+                    className={`${fourAreasSmallMenu} sm:hidden w-full px-3 py-4`}
                   >
                     <img src={areas} alt='Four areas' />
                   </div>
                 </li>
-                <li className='px-0 xl:px-6 py-3 lg:py-0 hidden lg:block'>
+                <li className='px-0 xl:px-3 py-3 lg:py-0 hidden lg:block'>
                   <LanguageDropDown />
                 </li>
               </ul>
