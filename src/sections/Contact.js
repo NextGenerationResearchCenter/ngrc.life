@@ -43,7 +43,10 @@ export default function Contact() {
       });
   };
   return (
-    <section className='text-gray-600 body-font relative contact py-14'>
+    <section
+      className='text-gray-600 body-font relative contact py-14'
+      id='contact'
+    >
       <div className='absolute inset-0 bg-gray-300'>
         <iframe
           width='100%'

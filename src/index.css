@@ -38,3 +38,9 @@
 .four-areas {
   letter-spacing: 0.25em;
 }
+
+.background-image {
+  background-image: url('./assets//img/hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

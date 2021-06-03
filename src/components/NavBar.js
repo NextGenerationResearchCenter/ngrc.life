@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-scroll';
-import { Link as DomLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import bg from '../assets/img/ngrc_sep_grey2.png';
 import exitIntent from 'exit-intent';
 import Modal from 'react-modal';
@@ -130,13 +129,7 @@ export default function NavBar() {
       >
         <div className='container lg:px-10 mx-auto flex flex-wrap items-center justify-between'>
           <div className='items-center w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
-            <Link
-              to='hero'
-              spy={true}
-              smooth={true}
-              duration={1000}
-              className='cursor-pointer'
-            >
+            <HashLink smooth to='/#hero'>
               <div className='pl-2 flex items-center'>
                 <div className='flex'>
                   <div>
@@ -175,7 +168,7 @@ export default function NavBar() {
                   </div>
                 </div>
               </div>
-            </Link>
+            </HashLink>
 
             <div className='flex items-center'>
               <span className='lg:hidden'>
@@ -222,14 +215,11 @@ export default function NavBar() {
                       {t('navbar.navlink1')}
                     </span>
                   </Link> */}
-                  <HashLink smooth to='/#about'>
-                    Section Two
-                  </HashLink>
-                  <Link
+                  <HashLink
+                    smooth
+                    to='/#about'
                     className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                    to='/about'
                     spy={true}
-                    smooth={true}
                     duration={1000}
                   >
                     <span
@@ -238,13 +228,13 @@ export default function NavBar() {
                     >
                       {t('navbar.navlink2')}
                     </span>
-                  </Link>
+                  </HashLink>
 
-                  <Link
+                  <HashLink
+                    smooth
+                    to='/#news'
                     className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                    to='news'
                     spy={true}
-                    smooth={true}
                     duration={1000}
                   >
                     <span
@@ -253,12 +243,12 @@ export default function NavBar() {
                     >
                       {t('navbar.navlink3')}
                     </span>
-                  </Link>
-                  <Link
+                  </HashLink>
+                  <HashLink
+                    smooth
+                    to='/#contact'
                     className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                    to='contact'
                     spy={true}
-                    smooth={true}
                     duration={1000}
                   >
                     <span
@@ -267,8 +257,8 @@ export default function NavBar() {
                     >
                       {t('navbar.navlink4')}
                     </span>
-                  </Link>
-                  <DomLink
+                  </HashLink>
+                  <Link
                     className='py-2 px-4 xl:px-5 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
                     to='/research-center'
                   >
@@ -278,7 +268,7 @@ export default function NavBar() {
                     >
                       {t('navbar.navlink5')}
                     </span>
-                  </DomLink>
+                  </Link>
                   <div
                     className={`${fourAreasSmallMenu} sm:hidden w-full px-3 py-4`}
                   >
