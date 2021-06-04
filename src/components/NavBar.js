@@ -22,6 +22,7 @@ export default function NavBar() {
   const [areasWidth, setAreasWidth] = useState('max-w-xl');
   const [fourAreasSmall, setFourAreasSmall] = useState('');
   const [fourAreasSmallMenu, setFourAreasSmallMenu] = useState('');
+  const [areasShow, setAreasShow] = useState('');
 
   const { t } = useTranslation();
 
@@ -42,21 +43,29 @@ export default function NavBar() {
         document.body.scrollTop > 150
       ) {
         setNavbarVersion('nav-scrolled');
-        setLogoShow('');
         setAreasWidth('max-w-lg');
         setFourAreasSmall('hidden');
         setFourAreasSmallMenu('block');
+        if (pathname === '/research-center') {
+          setLogoShow('block');
+        } else {
+          setLogoShow('');
+        }
       } else if (
         document.documentElement.scrollTop < 151 ||
         document.body.scrollTop < 151
       ) {
         setNavbarVersion('bg-transparent');
-        setLogoShow('hidden');
         setAreasWidth('max-w-xl');
         setFourAreasSmall('block');
         setFourAreasSmallMenu('hidden');
-      } else if (pathname == '/research-center') {
-        setFourAreasSmall('hidden');
+        if (pathname === '/research-center') {
+          setLogoShow('pl-10');
+          setAreasShow('hidden');
+        } else {
+          setLogoShow('hidden');
+          setAreasShow('block');
+        }
       }
     };
 
@@ -66,8 +75,6 @@ export default function NavBar() {
     removeExitIntent();
 
     updateNavbar();
-
-    console.log(pathname);
 
     window.addEventListener('scroll', updateNavbar);
 
@@ -139,36 +146,19 @@ export default function NavBar() {
                 <div className='flex'>
                   <div>
                     <div className='flex items-center'>
-                      <span className={`${logoShow} mr-8`}>
+                      <span className={`${logoShow} mr-8 my-2 lg:mt-0`}>
                         <img
                           src={PictureLogo}
-                          style={{ width: '45px', height: '45px' }}
+                          style={{ width: '60px', height: '60px' }}
                           alt='Logo'
                         />
                       </span>
 
                       <span
-                        className={`xl:${areasWidth} hidden sm:block pl-10 md:pl-10 max-w-sm`}
+                        className={`xl:${areasWidth} hidden sm:${areasShow} pl-10 md:pl-10 max-w-sm`}
                       >
                         <img src={areas} alt='The four areas' />
                       </span>
-                      {/* <span className=' text-graydark font-montregular text-md truncate ml-2 four-areas'>
-                      <span className='border-b-4 border-red-500'>
-                        Life Science
-                      </span>
-                      {'  '}-{'  '}
-                      <span className='border-b-4 border-green-500'>
-                        Enviroment
-                      </span>
-                      {'  '}-{'  '}
-                      <span className='border-b-4 border-yellow-500'>
-                        Energy
-                      </span>
-                      {'  '}-{'  '}
-                      <span className='border-b-4 border-blue-500'>
-                        Education
-                      </span>
-                    </span> */}
                     </div>
                   </div>
                 </div>

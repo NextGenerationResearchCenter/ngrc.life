@@ -1,27 +1,18 @@
 import { useTranslation } from 'react-i18next';
 import IntroVideo from '../components/IntroVideo';
-import Per from '../assets/img/newLogo.png';
+import Per from '../assets/img/new_logo_trans.png';
 import { HashLink } from 'react-router-hash-link';
-
-import Background from '../assets/img/hero_background3.png';
 
 export default function Hero() {
   const { t } = useTranslation();
   return (
     <section
-      className='relative pt-0 xl:py-15 items-center flex lg:h-screen'
+      className='relative pt-0 xl:py-15 items-center flex lg:h-screen bg-right bg-no-repeat sm:bg-contain bg-none sm:bg-hero'
       id='hero'
-      style={{
-        backgroundImage: `url(${Background})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right',
-        backgroundSize: 'contain, cover',
-        height: '100vh',
-      }}
     >
       <div className='container mx-auto items-center flex flex-wrap'>
         <div className='md:w-8/12 lg:w-6/12'>
-          <div className='pt-5 md:pt-10 sm:ml-0 my-32 mx-auto text-center md:text-left px-6'>
+          <div className='pt-5 md:pt-10 sm:ml-0 md:my-32 mx-auto text-center md:text-left px-6'>
             <img
               src={Per}
               alt='...'

@@ -26,6 +26,10 @@ module.exports = {
         ngrcdarkred: '#AF3533',
         ngrclightred: '#C83D3C',
       },
+      backgroundImage: (theme) => ({
+        researchcenter: "url('/src/assets/img/forth.jpg')",
+        hero: "url('/src/assets/img/hero_background3.png')",
+      }),
     },
   },
   ts: {

@@ -17,7 +17,7 @@ export default function ResearchCenter() {
           backgroundSize: 'cover',
         }}
       >
-        <div className='max-w-xl px-6 pt-24 mx-auto lg:px-8 lg:max-w-7xl'>
+        <div className='max-w-xl px-6 pt-32 mx-auto lg:px-8 lg:max-w-7xl'>
           <h2 className='text-3xl md:text-4xl lg:text-5xl text-center font-montheavy tracking-tight dark:text-coolGray-50 text-graydark'>
             We promote research for the next generation
           </h2>
@@ -38,7 +38,7 @@ export default function ResearchCenter() {
             the mental and physical wellbeing of people and empower them to
             change their lives.
           </p>
-          <div class='container px-5 mx-auto py-24'>
+          <div class='container px-5 mx-auto py-16'>
             <div class='flex flex-wrap -m-4'>
               <div class='p-4 md:w-1/4'>
                 <div class='flex rounded-lg h-full bg-gray-100 bg-opacity-70 hover:bg-opacity-100 hover:bg-red-100 p-8 flex-col'>
