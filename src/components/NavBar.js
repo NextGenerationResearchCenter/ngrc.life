@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import bg from '../assets/img/ngrc_sep_grey2.png';
 import exitIntent from 'exit-intent';
 import Modal from 'react-modal';
@@ -13,6 +13,7 @@ import areas from '../assets/img/areas.png';
 import { HashLink } from 'react-router-hash-link';
 
 export default function NavBar() {
+  const { pathname } = useLocation();
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   // Navbar scroll hooks
@@ -54,6 +55,8 @@ export default function NavBar() {
         setAreasWidth('max-w-xl');
         setFourAreasSmall('block');
         setFourAreasSmallMenu('hidden');
+      } else if (pathname == '/research-center') {
+        setFourAreasSmall('hidden');
       }
     };
 
@@ -63,6 +66,8 @@ export default function NavBar() {
     removeExitIntent();
 
     updateNavbar();
+
+    console.log(pathname);
 
     window.addEventListener('scroll', updateNavbar);
 
