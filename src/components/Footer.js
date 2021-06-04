@@ -183,7 +183,7 @@ export default function Footer() {
 
         <div>
           <p className='text-center text-graylight dark:text-white font-montregular text-sm md:text-md'>
-            © Next Generation Research Center 2020 - All rights reserved
+            © Next Generation Research Center 2021 - All rights reserved
           </p>
         </div>
       </div>
