@@ -136,14 +136,16 @@ export default function NavBar() {
       <nav
         className={`${navbarVersion} top-0 fixed z-50 w-full flex flex-wrap items-center justify-between navbar-expand-sm bg-transparent py-1 lg:py-8 transition duration-500 ease-in-out`}
       >
-        <div className='container lg:px-6 mx-auto flex flex-wrap items-center justify-between'>
+        <div className='container lg:px-2 mx-auto flex flex-wrap items-center justify-between'>
           <div className='items-center w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
             <HashLink smooth to='/#hero'>
               <div className='md:pl-0 pl-2 flex items-center'>
                 <div className='flex'>
                   <div>
                     <div className='flex items-center'>
-                      <span className={`${logoShow} mr-8 my-2 lg:mt-0`}>
+                      <span
+                        className={`${logoShow} lg:mr-4 xl:mr-8 my-2 lg:mt-0`}
+                      >
                         <img
                           src={PictureLogo}
                           style={{ width: '60px', height: '60px' }}
@@ -152,7 +154,7 @@ export default function NavBar() {
                       </span>
 
                       <span
-                        className={`xl:max-w-lg hidden sm:${areasShow} sm:ml-24 md:ml-12 lg:ml-0 max-w-sm lg:max-w-64`}
+                        className={`max-w-md lg:max-w-sm hidden sm:${areasShow} md:ml-6 lg:ml-0`}
                       >
                         <img src={areas} alt='The four areas' />
                       </span>
