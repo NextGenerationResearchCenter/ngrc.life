@@ -18,8 +18,8 @@ export default function ResearchCenter() {
         }}
       >
         <div className='max-w-xl px-6 pt-32 mx-auto lg:px-8 lg:max-w-7xl'>
-          <h2 className='text-3xl md:text-4xl lg:text-5xl text-center font-montheavy tracking-tight dark:text-coolGray-50 text-graydark'>
-            Research Centers for the next generation
+          <h2 className='text-3xl md:text-4xl lg:text-6xl text-center font-montheavy tracking-tight dark:text-coolGray-50 text-graydark'>
+            Research Center love
           </h2>
 
           <p className='mt-2 dark:text-coolGray-400 text-graylight text-base md:text-md lg:text-lg font-montregular pt-3'>
@@ -325,7 +325,7 @@ export default function ResearchCenter() {
           </div>
         </div>
       </section>
-      <section className='dark:bg-coolGray-800 dark:text-coolGray-100'>
+      <section className='dark:bg-coolGray-800 dark:text-coolGray-100 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500'>
         <div className='container max-w-xl p-6 py-14 lg:py-24 mx-auto space-y-24 lg:px-8 lg:max-w-7xl'>
           {/* <div>
             <h2 className='text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-coolGray-50'>
@@ -337,7 +337,7 @@ export default function ResearchCenter() {
           </div> */}
           <div className='grid lg:gap-4 lg:grid-cols-2 lg:items-center'>
             <div>
-              <div className='flex items-center'>
+              <div className='flex items-center lg:my-10'>
                 <div class='w-12 h-12 p-1 mr-3 inline-flex items-center justify-center rounded-full bg-red-400 text-white flex-shrink-0'>
                   <svg
                     width='134px'
@@ -380,7 +380,7 @@ export default function ResearchCenter() {
                     </g>
                   </svg>
                 </div>
-                <h2 className='text-2xl md:text-3xl lg:text-4xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark ml-3'>
+                <h2 className='text-2xl md:text-3xl lg:text-5xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark ml-3'>
                   Life science
                 </h2>
               </div>
@@ -419,12 +419,12 @@ export default function ResearchCenter() {
           </div>
           <div className='grid lg:gap-4 lg:grid-cols-2 lg:items-center lg:pt-10'>
             <div className='lg:col-start-2'>
-              <h4 className='text-md md:text-lg lg:text-2xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark ml-2 lg:mb-10'>
+              <h4 className='text-md md:text-lg lg:text-4xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark ml-2 lg:mb-10'>
                 Our general purpose in the field of Life science:
               </h4>
               <div className='mt-6 space-y-6'>
                 <div className='flex'>
-                  <div className='flex-shrink-0'>
+                  <div className=''>
                     <div className='flex items-center justify-center w-10 h-10 rounded-md dark:bg-violet-400 dark:text-coolGray-900'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'

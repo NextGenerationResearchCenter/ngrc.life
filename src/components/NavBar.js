@@ -155,7 +155,7 @@ export default function NavBar() {
                       </span>
 
                       <span
-                        className={`xl:${areasWidth} hidden sm:${areasShow} pl-10 md:pl-10 max-w-sm`}
+                        className={`xl:${areasWidth} hidden sm:${areasShow} max-w-sm lg:max-w-sm`}
                       >
                         <img src={areas} alt='The four areas' />
                       </span>
@@ -182,7 +182,7 @@ export default function NavBar() {
             </div>
           </div>
           {/*Four areas compact view*/}
-          <div className={`${fourAreasSmall} sm:hidden w-full px-4 py-1`}>
+          <div className={`${fourAreasSmall} sm:hidden w-full px-12 py-1`}>
             <img src={areas} alt='Four areas' />
           </div>
 

@@ -2,26 +2,24 @@ import { useTranslation } from 'react-i18next';
 import IntroVideo from '../components/IntroVideo';
 import Per from '../assets/img/new_logo_trans.png';
 import { HashLink } from 'react-router-hash-link';
+import HeroBg from '../assets/img/hero_background3.png';
 
 export default function Hero() {
   const { t } = useTranslation();
   return (
     <section
-      className='relative pt-0 xl:py-15 items-center flex lg:h-screen bg-right bg-no-repeat sm:bg-contain bg-none sm:bg-hero'
+      className='relative py-24 sm:py-10 md:py-0 lg:py-15 items-center flex lg:h-screen'
       id='hero'
     >
-      <div className='container mx-auto items-center flex flex-wrap'>
+      <div className='container mx-auto items-center flex flex-wrap z-10'>
         <div className='md:w-8/12 lg:w-6/12'>
-          <div className='pt-5 md:pt-10 sm:ml-0 md:my-32 mx-auto text-center md:text-left px-6'>
-            <img
-              src={Per}
-              alt='...'
-              className='mx-auto sm:ml-2 w-11/12 sm:w-8/12 md:w-10/12'
-            />
+          <div className='pt-5 sm:mt-24 md:mt-16 md:ml-10 sm:ml-0 md:my-32 mx-auto md:text-left lg:pt-10'>
+            <img src={Per} alt='...' className='mx-auto w-8/12 md:ml-0' />
+
             {/* <h2 className='font-montheavy text-4xl text-graydark'>
               Next Generation Research Center
             </h2> */}
-            <p className='pl-4 pt-2 text-sm lg:text-lg xl:text-xl leading-relaxed text-graydark font-montregular text-left'>
+            <p className='pl-9 sm:pl-0 pt-4 text-sm lg:text-lg xl:text-xl leading-relaxed text-graydark font-montregular text-left'>
               {t('hero.h1-sub')}
             </p>
             <div className='pl-2 mt-5 sm:mt-10'>
@@ -35,11 +33,11 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      {/* <img
-        className='absolute top-0 right-0 hidden xs:w6/12 sm:block sm:w-5/12 min-h-500 z-10'
-        src={require('../assets/img/ngrc_colors5.png').default}
-        alt='...'
-      /> */}
+      <img
+        src={HeroBg}
+        className='absolute opacity-70 md:block top-0 right-0 md:w-7/12 lg:w-8/12 xl:w-5/12 hidden h-full'
+        alt=''
+      />
     </section>
   );
 }
