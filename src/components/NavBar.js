@@ -136,10 +136,10 @@ export default function NavBar() {
       <nav
         className={`${navbarVersion} top-0 fixed z-50 w-full flex flex-wrap items-center justify-between navbar-expand-sm bg-transparent py-1 lg:py-8 transition duration-500 ease-in-out`}
       >
-        <div className='container lg:px-6 xl:px-12 mx-auto flex flex-wrap items-center justify-between'>
+        <div className='container lg:px-6 mx-auto flex flex-wrap items-center justify-between'>
           <div className='items-center w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
             <HashLink smooth to='/#hero'>
-              <div className='pl-2 flex items-center'>
+              <div className='md:pl-0 pl-2 flex items-center'>
                 <div className='flex'>
                   <div>
                     <div className='flex items-center'>
@@ -152,7 +152,7 @@ export default function NavBar() {
                       </span>
 
                       <span
-                        className={`xl:max-w-lg xl:ml-0 xl:max-w-80 hidden sm:${areasShow} sm:ml-24 md:ml-12 max-w-sm lg:max-w-64`}
+                        className={`xl:max-w-lg hidden sm:${areasShow} sm:ml-24 md:ml-12 lg:ml-0 max-w-sm lg:max-w-64`}
                       >
                         <img src={areas} alt='The four areas' />
                       </span>
@@ -179,7 +179,7 @@ export default function NavBar() {
             </div>
           </div>
           {/*Four areas compact view*/}
-          <div className={`${fourAreasSmall} sm:hidden w-full px-4 py-1`}>
+          <div className={`${fourAreasSmall} sm:hidden w-full px-14 py-1`}>
             <img src={areas} alt='Four areas' />
           </div>
 
