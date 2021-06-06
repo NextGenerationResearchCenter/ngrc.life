@@ -17,7 +17,7 @@ export default function Hero() {
             <img
               src={Per}
               alt='...'
-              className='mx-auto w-full xl:w-9/12 md:ml-0 sm:px-8 px-6 md:px-0'
+              className='mx-auto w-full xl:w-9/12 md:ml-0 sm:px-8 md:px-0'
             />
             <p className='sm:pl-0 pt-4 text-base md:text-md lg:text-lg leading-relaxed  text-graydark font-montregular text-left'>
               {t('hero.h1-sub')}

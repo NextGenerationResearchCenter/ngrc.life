@@ -154,7 +154,7 @@ export default function NavBar() {
                       </span>
 
                       <span
-                        className={`max-w-md lg:max-w-sm hidden sm:${areasShow} md:ml-6 lg:ml-0`}
+                        className={`max-w-md lg:max-w-sm xl:max-w-md hidden sm:${areasShow} md:ml-6 lg:ml-0`}
                       >
                         <img src={areas} alt='The four areas' />
                       </span>
