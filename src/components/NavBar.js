@@ -140,7 +140,7 @@ export default function NavBar() {
           <div className='items-center w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
             <HashLink smooth to='/#hero'>
               <div className='md:pl-0 pl-2 flex items-center'>
-                <div className='flex'>
+                <div className='flex justify-between'>
                   <div>
                     <div className='flex items-center'>
                       <span
@@ -154,7 +154,7 @@ export default function NavBar() {
                       </span>
 
                       <span
-                        className={`max-w-md lg:max-w-sm xl:max-w-md hidden sm:${areasShow} md:ml-6 lg:ml-0`}
+                        className={`max-w-md lg:max-w-sm xl:max-w-md hidden sm:${areasShow} md:ml-6 2xl:ml-10`}
                       >
                         <img src={areas} alt='The four areas' />
                       </span>
@@ -181,7 +181,7 @@ export default function NavBar() {
             </div>
           </div>
           {/*Four areas compact view*/}
-          <div className={`${fourAreasSmall} sm:hidden w-full px-14 py-1`}>
+          <div className={`${fourAreasSmall} sm:hidden w-full px-4 py-1`}>
             <img src={areas} alt='Four areas' />
           </div>
 

@@ -93,7 +93,7 @@ export default function ResearchCenter() {
                       vegan taxidermy. Gastropub indxgo juice poutine.
                     </p>
                     <a
-                      className='mt-3 text-indigo-500 inline-flex items-center'
+                      className='mt-3 text-red-900 inline-flex items-center'
                       href='#'
                     >
                       Learn More
@@ -159,7 +159,7 @@ export default function ResearchCenter() {
                       Blue bottle crucifix vinyl post-ironic four dollar toast
                       vegan taxidermy. Gastropub indxgo juice poutine.
                     </p>
-                    <a class='mt-3 text-indigo-500 inline-flex items-center'>
+                    <a class='mt-3 text-blue-900 inline-flex items-center'>
                       Learn More
                       <svg
                         fill='none'
@@ -207,7 +207,7 @@ export default function ResearchCenter() {
                       Blue bottle crucifix vinyl post-ironic four dollar toast
                       vegan taxidermy. Gastropub indxgo juice poutine.
                     </p>
-                    <a class='mt-3 text-indigo-500 inline-flex items-center'>
+                    <a class='mt-3 text-yellow-900 inline-flex items-center'>
                       Learn More
                       <svg
                         fill='none'
@@ -304,7 +304,7 @@ export default function ResearchCenter() {
                       Blue bottle crucifix vinyl post-ironic four dollar toast
                       vegan taxidermy. Gastropub indxgo juice poutine.
                     </p>
-                    <a class='mt-3 text-indigo-500 inline-flex items-center'>
+                    <a class='mt-3 text-green-900 inline-flex items-center'>
                       Learn More
                       <svg
                         fill='none'

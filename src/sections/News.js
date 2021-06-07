@@ -7,6 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { db } from '../firebase/firebaseConfig';
 import { useLocalStorage } from '../localStorage';
 
+import Biovacc from '../assets/img/biovacc.jpeg';
+
 export default function Test() {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({});
@@ -66,27 +68,41 @@ export default function Test() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className='container max-w-7xl px-5 py-14 mx-auto'>
-          <div className='flex flex-col lg:text-center w-full lg:mb-12'>
-            <h2 className='text-2xl md:text-3xl lg:text-4xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark text-left'>
-              {t('news.h1')}
-            </h2>
-            <hr className='mb-8 mt-3 border bg-gray-900' />
-            <h2 className='text-xl md:text-2xl lg:text-3xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark'>
-              {t('news.h2')}
-            </h2>
-            <p className='mt-4 dark:text-coolGray-400 text-graylight text-base md:text-lg font-montregular'>
-              {t('news.p1.part1')}
-            </p>
-            <p className='text-lg xl:text-xl mt-16 text-graylight font-montheavy'>
+        <div className='max-w-xl p-6 mx-auto lg:px-8 lg:max-w-7xl'>
+          <h2 className='text-2xl md:text-3xl lg:text-4xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark text-left'>
+            {t('news.h1')}
+          </h2>
+          <hr className='mb-8 mt-3 border bg-gray-900' />
+        </div>
+        <div className='max-w-xl p-6 mx-auto space-y-16 lg:px-8 lg:max-w-7xl'>
+          <div className='grid lg:gap-8 lg:grid-cols-2 lg:items-center w-100'>
+            <div>
+              <h2 className='text-xl md:text-2xl lg:text-3xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark'>
+                {t('news.h2')}
+              </h2>
+              <p className='mt-4 dark:text-coolGray-400 text-graylight text-base md:text-lg font-montregular'>
+                {t('news.p1.part1')}
+              </p>
+            </div>
+            <div aria-hidden='true' className='mt-10 lg:mt-0'>
+              <img
+                src={Biovacc}
+                alt=''
+                className='mx-auto rounded-lg shadow-lg border border-purple-200'
+                style={{ madWidth: '360px', maxHeight: '480px' }}
+              />
+            </div>
+          </div>
+        </div>
+        <div className='max-w-xl p-6 mx-auto space-y-4 lg:px-8 lg:max-w-7xl justify-center'>
+          <div className='text-center'>
+            <p className='text-lg xl:text-xl mt-4 lg:mt-10 text-graylight font-montheavy'>
               {t('news.h2-1')}
             </p>
-            <p className='text-graylight text-md lg:text-lg font-montregular mt-1 font-base'>
+            <p className='text-graylight text-md lg:text-lg font-montregular mt-2 font-base'>
               {t('news.h2-1-sub')}
             </p>
           </div>
-        </div>{' '}
-        <div className='container px-5 mx-auto'>
           <form onSubmit={handleSubmit}>
             <div className='flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:px-0 items-end mb-10'>
               <div className='relative flex-grow w-full'>
