@@ -252,9 +252,12 @@ export default function NavBar() {
                       {t('navbar.navlink4')}
                     </span>
                   </HashLink>
-                  <Link
-                    className='py-2 px-4 xl:px-5 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                    to='/research-center'
+                  <HashLink
+                    smooth
+                    to='/research-center/#research-center-hero'
+                    className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                    spy={true}
+                    duration={1000}
                   >
                     <span
                       className='text-ngrcdarkred text-md xl:text-lg hover:text-red-400 leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
@@ -262,7 +265,7 @@ export default function NavBar() {
                     >
                       {t('navbar.navlink5')}
                     </span>
-                  </Link>
+                  </HashLink>
                   <div
                     className={`${fourAreasSmallMenu} sm:hidden w-full px-3 py-4`}
                   >
