@@ -4,8 +4,10 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import HeroSection from './views/HeroSection';
 import ResearchCenter from './views/ResearchCenter';
+import smoothscroll from 'smoothscroll-polyfill';
 
 function App() {
+  smoothscroll.polyfill();
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
     } else {

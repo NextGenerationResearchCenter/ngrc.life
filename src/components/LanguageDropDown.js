@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const LanguageDropDown = () => {
+  const [displayLan, setDisplayLan] = useState('');
   const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (i18n.language.includes('en')) {
+      setDisplayLan('en');
+    } else {
+      setDisplayLan(i18n.language);
+    }
+  }, [i18n.language]);
 
   return (
     <div className='dropdown inline-block relative'>
@@ -10,7 +19,7 @@ const LanguageDropDown = () => {
         <div className='flex items-center text-md sm:text-xl'>
           <i className='fas fa-globe mr-2 lg:mr-1' />
           <span className='h-full mx-2 text-sm sm:text-xl pb-1'>
-            {i18n.language}
+            {displayLan}
           </span>
           <svg
             className='fill-current h-4 w-4 md:h-5 md:w-5'

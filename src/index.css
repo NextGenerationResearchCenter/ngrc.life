@@ -39,7 +39,7 @@
   height: 65px;
   width: 65px;
   margin: 3px;
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 .logo-scrolled {
@@ -49,11 +49,10 @@
 }
 
 @media only screen and (max-width: 640px) {
-  /* For mobile phones: */
   .logo-not-scrolled {
     height: 45px;
     width: 45px;
     margin: 3px;
-    margin-right: 20px;
+    margin-right: 10px;
   }
 }
