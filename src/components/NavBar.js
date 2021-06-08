@@ -13,12 +13,12 @@ import { HashLink } from 'react-router-hash-link';
 
 export default function NavBar() {
   const { pathname } = useLocation();
-  const [navbarOpen, setNavbarOpen] = useState(false);
-  const [navLogoClass, setNavLogoClass] = useState('logo-not-scrolled');
 
-  // Navbar scroll hooks
+  // Navbar hooks
+  const [navbarOpen, setNavbarOpen] = useState(false);
   const [navbarVersion, setNavbarVersion] = useState('bg-transparent');
   const [logoShow, setLogoShow] = useState('hidden');
+  const [navLogoClass, setNavLogoClass] = useState('logo-not-scrolled');
 
   const { t } = useTranslation();
 
@@ -126,10 +126,10 @@ export default function NavBar() {
   return (
     <>
       <nav
-        className={`${navbarVersion} top-0 fixed z-50 w-full flex flex-wrap items-center justify-between navbar-expand-sm bg-transparent py-1 lg:py-8 transition duration-500 ease-in-out`}
+        className={`${navbarVersion} top-0 fixed z-50 w-full flex flex-wrap items-center justify-between bg-transparent py-1 lg:py-8 transition duration-500 ease-in-out`}
       >
         <div className='container lg:px-2 mx-auto flex flex-wrap items-center justify-between'>
-          <div className='items-center w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
+          <div className='items-center w-full relative flex justify-between sm:w-auto sm:static sm:block sm:justify-start'>
             <div className='flex items-center'>
               <HashLink smooth to='/#hero'>
                 <div className='md:pl-0 pl-2 flex items-center'>
@@ -153,7 +153,7 @@ export default function NavBar() {
                   duration={1000}
                 >
                   <span
-                    className='text-graydark text-md xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
+                    className='text-graydark text-sm md:text-base xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
                     // onClick={() => setNavbarOpen(!navbarOpen)}
                   >
                     {t('navbar.navlink2')}
@@ -167,7 +167,7 @@ export default function NavBar() {
                   duration={1000}
                 >
                   <span
-                    className='text-graydark text-md xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
+                    className='text-graydark text-sm md:text-base xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
                     // onClick={() => setNavbarOpen(!navbarOpen)}
                   >
                     {t('navbar.navlink3')}
@@ -181,7 +181,7 @@ export default function NavBar() {
                   duration={1000}
                 >
                   <span
-                    className='text-graydark text-md xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
+                    className='text-graydark text-sm md:text-base xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
                     // onClick={() => setNavbarOpen(!navbarOpen)}
                   >
                     {t('navbar.navlink4')}
@@ -190,12 +190,12 @@ export default function NavBar() {
               </div>
             </div>
             <div className='flex items-center'>
-              <span className='lg:hidden'>
+              <span className='block sm:hidden'>
                 <LanguageDropDown />
               </span>
               <div className='flex center-items'>
                 <button
-                  className='cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none'
+                  className='cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block sm:hidden outline-none focus:outline-none'
                   type='button'
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
@@ -206,14 +206,14 @@ export default function NavBar() {
           </div>
           <div
             className={
-              'lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none' +
+              'sm:flex flex-grow items-center bg-white sm:bg-opacity-0 sm:shadow-none' +
               (navbarOpen ? ' block' : ' hidden')
             }
             id='example-navbar-warning'
           >
-            <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
-              <ul className='flex flex-col pt-3 lg:pt-0 lg:mt-0 lg:flex-row list-none lg:ml-auto'>
-                <li className='flex items-center flex-col lg:flex-row text-center'>
+            <ul className='flex flex-col sm:flex-row list-none sm:ml-auto items-center'>
+              <ul className=' items-center flex flex-col lg:mt-0 sm:flex-row list-none sm:ml-auto'>
+                <li className='flex flex-col sm:flex-row text-center'>
                   <HashLink
                     smooth
                     to='/research-center/#research-center-hero'
@@ -229,12 +229,14 @@ export default function NavBar() {
                     </span>
                   </HashLink>
                 </li>
-                <li className='px-0 xl:px-3 py-3 lg:py-0 hidden lg:block'>
-                  <LanguageDropDown />
-                </li>
+                <li className='px-0 xl:px-3 py-3 lg:py-0'></li>
               </ul>
             </ul>
+            <span className='hidden sm:block'>
+              <LanguageDropDown />
+            </span>
           </div>
+
           <Modal
             isOpen={modalIsOpen}
             onRequestClose={closeModal}

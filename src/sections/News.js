@@ -60,7 +60,7 @@ export default function Test() {
         pauseOnHover
       />
       <section
-        className='text-gray-600 body-font bg-gray-50 py-10 md:py-32 leading-relaxed'
+        className='text-gray-600 body-font bg-gray-50 pt-12 pb-5 md:py-32 leading-relaxed'
         id='news'
         style={{
           backgroundImage: `url(${bg})`,

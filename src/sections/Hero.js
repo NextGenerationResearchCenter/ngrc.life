@@ -13,11 +13,11 @@ export default function Hero() {
     >
       <div className='container mx-auto items-center z-10'>
         <div className='md:w-6/12 lg:w-6/12 px-5'>
-          <div className='pt-5 sm:mt-24 md:mt-16 md:my-32 mx-auto md:text-left lg:pt-10 md:px-4 lg:px-0 px-14'>
+          <div className='px-2 pt-4 sm:mt-24 md:mt-16 md:my-32 mx-auto md:text-left lg:pt-10 md:px-4 lg:px-0 sm:px-14'>
             <img
               src={Per}
               alt='...'
-              className='mx-auto w-full xl:w-9/12 md:ml-0 sm:px-8 md:px-0'
+              className='mx-auto w-full xl:w-9/12 md:ml-0 px-5 sm:px-8 md:px-0'
             />
             <p className='sm:pl-0 pt-4 text-base md:text-md lg:text-lg leading-relaxed  text-graydark font-montregular text-left'>
               {t('hero.h1-sub')}
@@ -35,7 +35,7 @@ export default function Hero() {
       </div>
       <img
         src={HeroBg}
-        className='absolute opacity-70 md:block top-0 right-0 md:w-8/12 lg:w-8/12 xl:w-5/12 hidden h-full'
+        className='absolute hidden md:opacity-40 lg:opacity-70 md:block top-0 right-0 h-full'
         alt=''
       />
     </section>

@@ -44,7 +44,7 @@ export default function Contact() {
   };
   return (
     <section
-      className='text-gray-600 body-font relative contact py-14'
+      className='text-gray-600 body-font relative contact px-10'
       id='contact'
     >
       <div className='absolute inset-0 bg-gray-300'>

@@ -7,13 +7,13 @@ const LanguageDropDown = () => {
   return (
     <div className='dropdown inline-block relative'>
       <button className='text-gray-700 font-semibold py-2 pl-2 lg:px-4 rounded inline-flex items-center text-center align-baseline'>
-        <div className='flex items-center text-xl'>
+        <div className='flex items-center text-md sm:text-xl'>
           <i className='fas fa-globe mr-2 lg:mr-1' />
-          <span className='h-full hidden lg:block mx-2 text-xl pb-1'>
+          <span className='h-full mx-2 text-sm sm:text-xl pb-1'>
             {i18n.language}
           </span>
           <svg
-            className='fill-current h-5 w-5'
+            className='fill-current h-4 w-4 md:h-5 md:w-5'
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 20 20'
           >
