@@ -3,6 +3,7 @@ import IntroVideo from '../components/IntroVideo';
 import Per from '../assets/img/new_logo_trans.png';
 import { HashLink } from 'react-router-hash-link';
 import HeroBg from '../assets/img/hero_background3.png';
+import HeroBgLarge from '../assets/img/hero_background2.png';
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -35,7 +36,12 @@ export default function Hero() {
       </div>
       <img
         src={HeroBg}
-        className='absolute hidden md:opacity-40 lg:opacity-70 md:block top-0 right-0 h-full'
+        className='absolute hidden md:opacity-40 lg:opacity-70 md:block top-0 right-0 h-full xl:hidden'
+        alt=''
+      />
+      <img
+        src={HeroBgLarge}
+        className='opacity-70 top-0 right-0 h-full absolute hidden xl:block'
         alt=''
       />
     </section>

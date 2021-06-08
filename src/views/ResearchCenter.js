@@ -20,21 +20,24 @@ export default function ResearchCenter() {
       >
         <div className='max-w-xl px-6 pt-32 mx-auto lg:px-8 lg:max-w-7xl'>
           <h2 className='text-3xl md:text-4xl lg:text-6xl text-center font-montheavy tracking-tight dark:text-coolGray-50 text-graydark'>
-            Research Center love
+            NGRC Research Center
           </h2>
 
           <p className='mt-2 dark:text-coolGray-400 text-graylight text-base md:text-md lg:text-lg font-montregular pt-3'>
-            NGRC&#39;s primary research focus is on Life Science, Education,
-            Energy and Environment. We want to make sure that other disciplines
-            than the conventional are allowed space in the research arena. By
-            inviting different schools of thought and traditions to complement
-            established medicine and paved out routes, we help individuals,
-            scientists and the collective expand their perspective to find new
-            solutions to universal problems.
+            <span className='font-montheavy text-xl'>
+              NGRC&#39;s primary focus is to promote research that aligns with
+              our values and supports innovative solutions for healthy living.
+            </span>{' '}
+            We want to make sure that other disciplines than the conventional
+            are allowed space in the research arena. By inviting different
+            schools of thought and traditions to complement established medicine
+            and paved out routes, we help individuals, scientists and the
+            collective expand their perspective to find new solutions to
+            universal problems.
             <br />
             <br />
-            In particular, what differentiates us from other science centers, is
-            our dedication to normalizing the research behind, for example,
+            In particular, what differentiates us from other research centers,
+            is our dedication to normalizing the research behind, for example,
             neuroscience, quantum physics and epigenetics, targeted to better
             the mental and physical wellbeing of people and empower them to
             change their lives.
