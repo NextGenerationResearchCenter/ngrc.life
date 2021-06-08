@@ -21,6 +21,8 @@
     url('./assets/fonts/Mont/Mont-Regular.otf') format('truetype');
 }
 
+/* CUSTOM CLASSES HERE */
+
 /* Dropdown Menu */
 .dropdown:hover .dropdown-menu {
   display: block;
@@ -33,6 +35,15 @@
   padding-bottom: 0.5rem !important;
 }
 
-.four-areas {
-  letter-spacing: 0.25em;
+.logo-not-scrolled {
+  height: 65px;
+  width: 65px;
+  margin: 3px;
+  margin-right: 20px;
+}
+
+.logo-scrolled {
+  height: 45px;
+  width: 45px;
+  margin-right: 10px;
 }

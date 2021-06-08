@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import bg from '../assets/img/ngrc_sep_grey2.png';
 import exitIntent from 'exit-intent';
 import Modal from 'react-modal';
@@ -9,19 +9,16 @@ import { db } from '../firebase/firebaseConfig';
 import { toast } from 'react-toastify';
 import PictureLogo from '../assets/img/ngrc_logo.png';
 import LanguageDropDown from './LanguageDropDown';
-import areas from '../assets/img/areas.png';
 import { HashLink } from 'react-router-hash-link';
 
 export default function NavBar() {
   const { pathname } = useLocation();
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [navLogoClass, setNavLogoClass] = useState('logo-not-scrolled');
 
   // Navbar scroll hooks
   const [navbarVersion, setNavbarVersion] = useState('bg-transparent');
   const [logoShow, setLogoShow] = useState('hidden');
-  const [fourAreasSmall, setFourAreasSmall] = useState('');
-  const [fourAreasSmallMenu, setFourAreasSmallMenu] = useState('');
-  const [areasShow, setAreasShow] = useState('');
 
   const { t } = useTranslation();
 
@@ -36,32 +33,27 @@ export default function NavBar() {
   );
 
   useEffect(() => {
+    console.log(pathname);
     const updateNavbar = () => {
       if (
+        //Navbar is scrolled down
         document.documentElement.scrollTop > 150 ||
         document.body.scrollTop > 150
       ) {
         setNavbarVersion('nav-scrolled');
-        setFourAreasSmall('hidden');
-        setFourAreasSmallMenu('block');
-        if (pathname === '/research-center') {
-          setLogoShow('block');
-        } else {
-          setLogoShow('');
-        }
+        setLogoShow('');
+        setNavLogoClass('logo-scrolled');
       } else if (
+        //Navbar is not scrolled down
         document.documentElement.scrollTop < 151 ||
         document.body.scrollTop < 151
       ) {
         setNavbarVersion('bg-transparent');
-        setFourAreasSmall('block');
-        setFourAreasSmallMenu('hidden');
-        if (pathname === '/research-center') {
-          setLogoShow('pl-10');
-          setAreasShow('hidden');
+        setNavLogoClass('logo-not-scrolled');
+        if (pathname === '/research-center/') {
+          setLogoShow('');
         } else {
           setLogoShow('hidden');
-          setAreasShow('block');
         }
       }
     };
@@ -138,37 +130,69 @@ export default function NavBar() {
       >
         <div className='container lg:px-2 mx-auto flex flex-wrap items-center justify-between'>
           <div className='items-center w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
-            <HashLink smooth to='/#hero'>
-              <div className='md:pl-0 pl-2 flex items-center'>
-                <div className='flex justify-between'>
+            <div className='flex items-center'>
+              <HashLink smooth to='/#hero'>
+                <div className='md:pl-0 pl-2 flex items-center'>
                   <div>
-                    <div className='flex items-center'>
-                      <span
-                        className={`${logoShow} lg:mr-4 xl:mr-8 my-2 lg:mt-0`}
-                      >
-                        <img
-                          src={PictureLogo}
-                          style={{ width: '60px', height: '60px' }}
-                          alt='Logo'
-                        />
-                      </span>
-
-                      <span
-                        className={`max-w-md lg:max-w-sm xl:max-w-md hidden sm:${areasShow} md:ml-6 2xl:ml-10`}
-                      >
-                        <img src={areas} alt='The four areas' />
-                      </span>
-                    </div>
+                    <span className={`${logoShow}`}>
+                      <img
+                        src={PictureLogo}
+                        className={`${navLogoClass}`}
+                        alt='Logo'
+                      />
+                    </span>
                   </div>
                 </div>
+              </HashLink>
+              <div className='flex items-center '>
+                <HashLink
+                  smooth
+                  to='/#about'
+                  className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                  spy={true}
+                  duration={1000}
+                >
+                  <span
+                    className='text-graydark text-md xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
+                    // onClick={() => setNavbarOpen(!navbarOpen)}
+                  >
+                    {t('navbar.navlink2')}
+                  </span>
+                </HashLink>
+                <HashLink
+                  smooth
+                  to='/#news'
+                  className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                  spy={true}
+                  duration={1000}
+                >
+                  <span
+                    className='text-graydark text-md xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
+                    // onClick={() => setNavbarOpen(!navbarOpen)}
+                  >
+                    {t('navbar.navlink3')}
+                  </span>
+                </HashLink>
+                <HashLink
+                  smooth
+                  to='/#contact'
+                  className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
+                  spy={true}
+                  duration={1000}
+                >
+                  <span
+                    className='text-graydark text-md xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
+                    // onClick={() => setNavbarOpen(!navbarOpen)}
+                  >
+                    {t('navbar.navlink4')}
+                  </span>
+                </HashLink>
               </div>
-            </HashLink>
-
+            </div>
             <div className='flex items-center'>
               <span className='lg:hidden'>
                 <LanguageDropDown />
               </span>
-
               <div className='flex center-items'>
                 <button
                   className='cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none'
@@ -180,11 +204,6 @@ export default function NavBar() {
               </div>
             </div>
           </div>
-          {/*Four areas compact view*/}
-          <div className={`${fourAreasSmall} sm:hidden w-full px-4 py-1`}>
-            <img src={areas} alt='Four areas' />
-          </div>
-
           <div
             className={
               'lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none' +
@@ -195,63 +214,6 @@ export default function NavBar() {
             <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
               <ul className='flex flex-col pt-3 lg:pt-0 lg:mt-0 lg:flex-row list-none lg:ml-auto'>
                 <li className='flex items-center flex-col lg:flex-row text-center'>
-                  {/* <Link
-                    className='py-2 px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                    to='hero'
-                    spy={true}
-                    smooth={true}
-                    duration={1000}
-                  >
-                    <span
-                      className='text-graydark text-sm xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
-                      onClick={() => setNavbarOpen(!navbarOpen)}
-                    >
-                      {t('navbar.navlink1')}
-                    </span>
-                  </Link> */}
-                  <HashLink
-                    smooth
-                    to='/#about'
-                    className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                    spy={true}
-                    duration={1000}
-                  >
-                    <span
-                      className='text-graydark text-md xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
-                      onClick={() => setNavbarOpen(!navbarOpen)}
-                    >
-                      {t('navbar.navlink2')}
-                    </span>
-                  </HashLink>
-
-                  <HashLink
-                    smooth
-                    to='/#news'
-                    className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                    spy={true}
-                    duration={1000}
-                  >
-                    <span
-                      className='text-graydark text-md xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
-                      onClick={() => setNavbarOpen(!navbarOpen)}
-                    >
-                      {t('navbar.navlink3')}
-                    </span>
-                  </HashLink>
-                  <HashLink
-                    smooth
-                    to='/#contact'
-                    className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
-                    spy={true}
-                    duration={1000}
-                  >
-                    <span
-                      className='text-graydark text-md xl:text-lg hover:text-black leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
-                      onClick={() => setNavbarOpen(!navbarOpen)}
-                    >
-                      {t('navbar.navlink4')}
-                    </span>
-                  </HashLink>
                   <HashLink
                     smooth
                     to='/research-center/#research-center-hero'
@@ -266,11 +228,6 @@ export default function NavBar() {
                       {t('navbar.navlink5')}
                     </span>
                   </HashLink>
-                  <div
-                    className={`${fourAreasSmallMenu} sm:hidden w-full px-3 py-4`}
-                  >
-                    <img src={areas} alt='Four areas' />
-                  </div>
                 </li>
                 <li className='px-0 xl:px-3 py-3 lg:py-0 hidden lg:block'>
                   <LanguageDropDown />
