@@ -32,6 +32,10 @@ export default function NavBar() {
     'not-subscribed'
   );
 
+  const handleHburgerClick = () => {
+    if (navbarOpen) setNavbarOpen(!navbarOpen);
+  };
+
   useEffect(() => {
     console.log(pathname);
     const updateNavbar = () => {
@@ -213,7 +217,7 @@ export default function NavBar() {
           >
             <ul className='flex flex-col sm:flex-row list-none sm:ml-auto items-center'>
               <ul className=' items-center flex flex-col lg:mt-0 sm:flex-row list-none sm:ml-auto'>
-                <li className='flex flex-col sm:flex-row text-center'>
+                <li className='flex flex-col sm:flex-row text-center lg:pr-8'>
                   <HashLink
                     smooth
                     to='/research-center/#research-center-hero'
@@ -223,20 +227,19 @@ export default function NavBar() {
                   >
                     <span
                       className='text-ngrcdarkred text-md xl:text-lg hover:text-red-400 leading-relaxed whitespace-nowrap cursor-pointer font-montregular'
-                      onClick={() => setNavbarOpen(!navbarOpen)}
+                      onClick={handleHburgerClick}
                     >
                       {t('navbar.navlink5')}
                     </span>
                   </HashLink>
                 </li>
-                <li className='px-0 xl:px-3 py-3 lg:py-0'></li>
+                {/* <li className='px-0 xl:px-3 py-3 lg:py-0'></li> */}
               </ul>
             </ul>
             <span className='hidden sm:block'>
               <LanguageDropDown />
             </span>
           </div>
-
           <Modal
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
