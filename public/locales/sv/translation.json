@@ -52,5 +52,22 @@
     "form-2": "E-post",
     "form-3": "Meddelande",
     "form-4": "Skicka meddelande"
+  },
+  "research-center": {
+    "h1-sub": "NGRC stödjer forskning och utveckling som främjar innovativa lösningar för en hälsosam och hållbar livsstil.",
+    "p-1": "Vi bidrar till att fler discipliner än de konventionella får utrymme i forskningssammanhang och bjuder därför in olika läror och traditioner som ska komplettera den etablerade medicinen. På så sätt breddar vi perspektivet hos forskare, individer och företag samt skapar nya lösningar på både gamla och globala problem.",
+    "p-2": "Det som i synnerhet särskiljer oss från andra forskningscenter, är vår ambition att normalisera t.ex. neuroforskning, kvantfysik och epigenetik, i syfte att förbättra mentalt och fysiskt välmående hos människor, och samtidigt ge dem verktyg att förändra sina liv."
+  },
+  "lifescience": {
+    "p-1": "Studier har visat att när en person upprätthåller sitt hjärtas koherens i djup meditation, försätter det kroppen i ett tillstånd som är en perfekt inre miljö för att läka (Rollin McCraty, PhD and Carla Stanton, MD).",
+    "p-2": "Det var bara några årtionden sedan som den kollektiva ”sanningen” att vi är summan av våra gener, blev ifrågasatt. Att vårt medfödda DNA är det enda som avgör vem vi är, biologiskt. Men runt 1990 började epigenetiken få allt mer uppmärksamhet och forskare visade intresse för cellulära mekanismer som reglerar våra gener på olika sätt. Vår ambition är att påvisa det holistiska samspelet mellan kropp och sinne, och hur de påverkar varandra. Epigenetik och kvantfysik kan hjälpa oss att förstå att om vi förändrar det sätt vi tänker och mår, så kan vi påverka vår inre och yttre miljö.",
+    "p-3": "Våra forsknings- och behandlingscenter kommer att erbjuda ett brett spektrum av innovativa hälsofrämjande behandlingar, som exempelvis epigenetik, anti-aging, stamcellsbehandlingar och SPECT Brain scanning, för att nämna några.",
+    "p-4": "Forskare som Joe Dispenza, Gregg Braden and Bruce Lipton har alla gemensamt att de bidragit till att evidensbaserade hälso- och lycko-främjande tekniker fått mer utrymme i olika sammanhang. Vår ambition på NGRC är att ta det ytterligare ett steg längre.",
+    "h-2": "Syftet med NGRCs forsknings- och behandlingscenter är att",
+    "l-1": "Erbjuda patienter från hela världen en möjlighet att få högkvalitativa upplevelser, behandlingar och omvårdnad i norra Cypern",
+    "l-2": "Erbjuda forskare och läkare en trygg och stöttande miljö för forskningsaktiviteter fokuserade på att bidra till avancerade behandlingar, strategier och diagnostiseringstekniker",
+    "l-3": "Erbjuda patienter den högsta kvaliteten av omvårdnad och preventiva program i världen",
+    "l-4": "Att stödja forskning som kan leda till en betydande minskning av ohälsokostnader",
+    "l-5": "Vara i framkant och ta forskningsbaserade självläkande metoder till massorna"
   }
 }

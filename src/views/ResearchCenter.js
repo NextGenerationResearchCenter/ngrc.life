@@ -23,30 +23,18 @@ export default function ResearchCenter() {
             Research Center
           </h2>
 
-          <p className='mt-0 lg:mt-0 dark:text-coolGray-400 text-graylight text-base md:text-md lg:text-lg font-montheavy pt-3'>
-            <span className='font-montlight text-lg md:text-xl lg:text-2xl'>
-              NGRC&#39;s primary focus is to promote research that aligns with
-              our values and supports innovative solutions for healthy living.
-            </span>
+          <p className='mt-0 lg:mt-3 dark:text-coolGray-400 text-graydark text-base md:text-md lg:text-2xl font-montregular pt-3'>
+            {t('research-center.h1-sub')}
           </p>
           <p className='mt-2 dark:text-coolGray-400 text-graydark text-base md:text-md lg:text-lg font-montregular pt-3'>
-            We want to make sure that other disciplines than the conventional
-            are allowed space in the research arena. By inviting different
-            schools of thought and traditions to complement established medicine
-            and paved out routes, we help individuals, scientists and the
-            collective expand their perspective to find new solutions to
-            universal problems.
+            {t('research-center.p-1')}
           </p>
           <p className='mt-2 dark:text-coolGray-400 text-graydark text-base md:text-md lg:text-lg font-montregular pt-3'>
-            In particular, what differentiates us from other research centers,
-            is our dedication to normalizing the research behind, for example,
-            neuroscience, quantum physics and epigenetics, targeted to better
-            the mental and physical wellbeing of people and empower them to
-            change their lives.
+            {t('research-center.p-2')}
           </p>
           <div class='container px-5 mx-auto py-10 lg:py-16'>
             <div class='flex flex-wrap -m-4 justify-start'>
-              <div class='p-4 lg:w-1/4'>
+              {/* <div class='p-4 lg:w-1/4'>
                 <HashLink
                   smooth
                   to='/research-center/#life-science'
@@ -56,7 +44,7 @@ export default function ResearchCenter() {
                 >
                   <div class='flex rounded-lg h-full bg-gray-100 bg-opacity-70 hover:bg-opacity-100 hover:bg-red-100 p-8 flex-col'>
                     <div class='flex items-center mb-3'>
-                      <div class='w-12 h-12 p-1 mr-3 inline-flex items-center justify-center rounded-full bg-red-400 text-white flex-shrink-0'>
+                      <div class='w-12 h-12 p-1 mr-3 inline-flex items-center justify-center rounded-full bg-red-400 text-graydark flex-shrink-0'>
                         <svg
                           width='134px'
                           height='120px'
@@ -122,11 +110,11 @@ export default function ResearchCenter() {
                     </div>
                   </div>
                 </HashLink>
-              </div>
+              </div> */}
               {/* <div class='p-4 lg:w-1/4'>
                 <div class='flex rounded-lg h-full bg-gray-100 bg-opacity-70 hover:bg-opacity-100 hover:bg-blue-100 p-8 flex-col'>
                   <div class='flex items-center mb-3'>
-                    <div class='w-12 h-12 p-1 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-white flex-shrink-0'>
+                    <div class='w-12 h-12 p-1 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-graydark flex-shrink-0'>
                       <svg
                         version='1.1'
                         id='Layer_1'
@@ -190,7 +178,7 @@ export default function ResearchCenter() {
               {/* <div class='p-4 lg:w-1/4'>
                 <div class='flex rounded-lg h-full bg-gray-100 bg-opacity-70 hover:bg-opacity-100 hover:bg-yellow-100 p-8 flex-col'>
                   <div class='flex items-center mb-3'>
-                    <div class='w-12 h-12 p-1 mr-3 inline-flex items-center justify-center rounded-full bg-yellow-500 text-white flex-shrink-0'>
+                    <div class='w-12 h-12 p-1 mr-3 inline-flex items-center justify-center rounded-full bg-yellow-500 text-graydark flex-shrink-0'>
                       <svg
                         version='1.1'
                         id='Layer_1'
@@ -238,7 +226,7 @@ export default function ResearchCenter() {
               {/* <div class='p-4 lg:w-1/4'>
                 <div class='flex rounded-lg h-full bg-gray-100 bg-opacity-70 hover:bg-opacity-100 hover:bg-green-100 p-8 flex-col'>
                   <div class='flex items-center mb-3'>
-                    <div class='w-12 h-12 p-2 mr-3 inline-flex items-center justify-center rounded-full bg-green-500 text-white flex-shrink-0'>
+                    <div class='w-12 h-12 p-2 mr-3 inline-flex items-center justify-center rounded-full bg-green-500 text-graydark flex-shrink-0'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 41.8 48.42'
@@ -338,12 +326,12 @@ export default function ResearchCenter() {
       </section>
       {/* LIFE SCIENCE SECTION */}
       <section
-        className='dark:bg-coolGray-800 dark:text-coolGray-100 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500'
+        className='dark:bg-coolGray-800 dark:text-coolGray-100 bg-gray-100'
         id='life-science'
       >
         <div className='container max-w-xl p-6 lg:px-16 py-14 lg:py-20 mx-auto space-y-12 lg:max-w-7xl'>
           <div className='flex items-center lg:my-5 justify-center'>
-            <div class='w-17 h-17 p-1 mr-3 inline-flex items-center justify-center rounded-full bg-red-400 text-white flex-shrink-0 border-4 border-gray-100'>
+            <div class='w-17 h-17 p-1 mr-3 inline-flex items-center justify-center rounded-full bg-red-400 text-black flex-shrink-0 border-4 border-gray-700'>
               <svg
                 width='134px'
                 height='120px'
@@ -380,35 +368,20 @@ export default function ResearchCenter() {
                 </g>
               </svg>
             </div>
-            <h2 className='text-2xl md:text-3xl lg:text-5xl font-montheavy tracking-tight dark:text-coolGray-50 text-white ml-3'>
+            <h2 className='text-2xl md:text-3xl lg:text-5xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark ml-3 text-left'>
               Life science
             </h2>
           </div>
           <div className='grid lg:gap-2 lg:grid-cols-2 lg:items-center'>
             <div>
-              <p className='mt-4 dark:text-coolGray-400 text-white text-base md:text-md lg:text-lg font-montregular'>
-                Case studies have shown that when a person sustains their heart
-                coherence in deep meditation, it conditions the body into the
-                perfect state to heal (Rollin McCraty, PhD and Carla Stanton,
-                MD).
+              <p className='mt-4 dark:text-coolGray-400 text-graydark text-base md:text-md lg:text-lg font-montregular'>
+                {t('lifescience.p-1')}
+
                 <br />
-                It wasn&#39;t until just about 20 years ago when the collective
-                &quot;truth&quot; that we are the sum of our genes, was
-                questioned. That our inherited DNA is the only determinator of
-                who we are, biologically. But around 1990 the epigenetic science
-                gained speed, and scientists started to get interested in the
-                cellular mechanisms that can regulate our genes in different
-                ways. Our ambition is to highlight the holistic connection
-                between mind and body, and how they impact one another. How can
-                epigenetics and quantum physics help us understand that if we
-                change the way we think and feel, we can influence our internal
-                and external environment?
+                {t('lifescience.p-2')}
               </p>
-              <p className='mt-4 dark:text-coolGray-400 text-white text-base md:text-md lg:text-lg font-montregular'>
-                Our research and treatment centers will offer a broad spectrum
-                of innovative health-promoting treatments such as epigenetics,
-                anti-aging, stem cell treatments and SPECT Brain scanning, to
-                mention a few.
+              <p className='mt-4 dark:text-coolGray-400 text-graydark text-base md:text-md lg:text-lg font-montregular'>
+                {t('lifescience.p-3')}
               </p>
             </div>
             <div aria-hidden='true' className='mt-10 lg:mt-0'>
@@ -419,16 +392,13 @@ export default function ResearchCenter() {
               />
             </div>
           </div>
-          <p className='mt-4 dark:text-coolGray-400 text-white text-base md:text-md lg:text-lg font-montregular'>
-            Researchers such Joe Dispenza, Gregg Braden and Bruce Lipton all
-            have in common that they’ve started to pave the ground for the use
-            of evidence-based healing and joy promoting techniques. And our
-            ambition is to take it even further.
+          <p className='mt-4 dark:text-coolGray-400 text-graydark text-base md:text-md lg:text-lg font-montregular'>
+            {t('lifescience.p-4')}
           </p>
           <div className='grid lg:gap-2 lg:grid-cols-2 lg:items-center lg:pt-10'>
             <div className='lg:col-start-2'>
-              <h4 className='text-md md:text-lg lg:text-2xl font-montheavy tracking-tight dark:text-coolGray-50 text-white ml-2'>
-                Our general purpose in the field of Life science:
+              <h4 className='text-md md:text-lg lg:text-2xl font-montheavy tracking-tight dark:text-coolGray-50 text-graydark ml-2'>
+                {t('lifescience.h-2')}
               </h4>
               <div className='mt-3 space-y-3'>
                 <div className='flex'>
@@ -440,7 +410,7 @@ export default function ResearchCenter() {
                       >
                         <g id='Layer_7' data-name='Layer 7'>
                           <path
-                            fill='#ddd'
+                            fill='#383838'
                             d='M32,10.5A21.53,21.53,0,0,0,10.5,32c1.18,28.52,41.82,28.51,43,0A21.53,21.53,0,0,0,32,10.5ZM43.42,26.86,31,39.26a1.51,1.51,0,0,1-2.12,0l-8.32-8.32a1.5,1.5,0,0,1,2.12-2.12L30,36.08,41.3,24.74A1.5,1.5,0,0,1,43.42,26.86Z'
                           />
                         </g>
@@ -448,10 +418,8 @@ export default function ResearchCenter() {
                     </div>
                   </div>
                   <div className='ml-4'>
-                    <p className='mt-2 dark:text-coolGray-400 text-white text-base md:text-md lg:text-md font-montregular'>
-                      Provide patients from all over the world with the highest
-                      level of excellence, experience, quality and care in
-                      Northern Cyprus
+                    <p className='mt-2 dark:text-coolGray-400 text-graydark text-base md:text-md lg:text-md font-montregular'>
+                      {t('lifescience.l-1')}
                     </p>
                   </div>
                 </div>
@@ -464,7 +432,7 @@ export default function ResearchCenter() {
                       >
                         <g id='Layer_7' data-name='Layer 7'>
                           <path
-                            fill='#ddd'
+                            fill='#383838'
                             d='M32,10.5A21.53,21.53,0,0,0,10.5,32c1.18,28.52,41.82,28.51,43,0A21.53,21.53,0,0,0,32,10.5ZM43.42,26.86,31,39.26a1.51,1.51,0,0,1-2.12,0l-8.32-8.32a1.5,1.5,0,0,1,2.12-2.12L30,36.08,41.3,24.74A1.5,1.5,0,0,1,43.42,26.86Z'
                           />
                         </g>
@@ -472,12 +440,8 @@ export default function ResearchCenter() {
                     </div>
                   </div>
                   <div className='ml-4'>
-                    <p className='mt-2 dark:text-coolGray-400 text-white text-base md:text-md lg:text-md font-montregular'>
-                      Provide a safe and supportive environment for the
-                      development of both primary and clinical research
-                      activities for advanced treatments, strategies and
-                      diagnostic techniques for researchers and clinical
-                      physicians from around the world
+                    <p className='mt-2 dark:text-coolGray-400 text-graydark text-base md:text-md lg:text-md font-montregular'>
+                      {t('lifescience.l-2')}
                     </p>
                   </div>
                 </div>
@@ -490,7 +454,7 @@ export default function ResearchCenter() {
                       >
                         <g id='Layer_7' data-name='Layer 7'>
                           <path
-                            fill='#ddd'
+                            fill='#383838'
                             d='M32,10.5A21.53,21.53,0,0,0,10.5,32c1.18,28.52,41.82,28.51,43,0A21.53,21.53,0,0,0,32,10.5ZM43.42,26.86,31,39.26a1.51,1.51,0,0,1-2.12,0l-8.32-8.32a1.5,1.5,0,0,1,2.12-2.12L30,36.08,41.3,24.74A1.5,1.5,0,0,1,43.42,26.86Z'
                           />
                         </g>
@@ -498,9 +462,8 @@ export default function ResearchCenter() {
                     </div>
                   </div>
                   <div className='ml-4'>
-                    <p className='mt-2 dark:text-coolGray-400 text-white text-base md:text-md lg:text-md font-montregular'>
-                      Offer patients the best quality of care and prevention
-                      strategies;
+                    <p className='mt-2 dark:text-coolGray-400 text-graydark text-base md:text-md lg:text-md font-montregular'>
+                      {t('lifescience.l-3')}
                     </p>
                   </div>
                 </div>
@@ -513,7 +476,7 @@ export default function ResearchCenter() {
                       >
                         <g id='Layer_7' data-name='Layer 7'>
                           <path
-                            fill='#ddd'
+                            fill='#383838'
                             d='M32,10.5A21.53,21.53,0,0,0,10.5,32c1.18,28.52,41.82,28.51,43,0A21.53,21.53,0,0,0,32,10.5ZM43.42,26.86,31,39.26a1.51,1.51,0,0,1-2.12,0l-8.32-8.32a1.5,1.5,0,0,1,2.12-2.12L30,36.08,41.3,24.74A1.5,1.5,0,0,1,43.42,26.86Z'
                           />
                         </g>
@@ -521,9 +484,8 @@ export default function ResearchCenter() {
                     </div>
                   </div>
                   <div className='ml-4'>
-                    <p className='mt-2 dark:text-coolGray-400 text-white text-base md:text-md lg:text-md font-montregular'>
-                      To support scientific and medical research that can lead
-                      to significant reductions in healthcare costs
+                    <p className='mt-2 dark:text-coolGray-400 text-graydark text-base md:text-md lg:text-md font-montregular'>
+                      {t('lifescience.l-4')}
                     </p>
                   </div>
                 </div>
@@ -536,7 +498,7 @@ export default function ResearchCenter() {
                       >
                         <g id='Layer_7' data-name='Layer 7'>
                           <path
-                            fill='#ddd'
+                            fill='#383838'
                             d='M32,10.5A21.53,21.53,0,0,0,10.5,32c1.18,28.52,41.82,28.51,43,0A21.53,21.53,0,0,0,32,10.5ZM43.42,26.86,31,39.26a1.51,1.51,0,0,1-2.12,0l-8.32-8.32a1.5,1.5,0,0,1,2.12-2.12L30,36.08,41.3,24.74A1.5,1.5,0,0,1,43.42,26.86Z'
                           />
                         </g>
@@ -544,9 +506,8 @@ export default function ResearchCenter() {
                     </div>
                   </div>
                   <div className='ml-4'>
-                    <p className='mt-2 dark:text-coolGray-400 text-white text-base md:text-md lg:text-lg font-montregular'>
-                      Being a frontier when bringing science-based self-healing
-                      modalities to the public
+                    <p className='mt-2 dark:text-coolGray-400 text-graydark text-base md:text-md lg:text-md font-montregular'>
+                      {t('lifescience.l-5')}
                     </p>
                   </div>
                 </div>
