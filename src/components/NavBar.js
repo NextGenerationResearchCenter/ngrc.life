@@ -194,10 +194,10 @@ export default function NavBar() {
               </div>
             </div>
             <div className='flex items-center'>
-              <span className='block sm:hidden'>
+              <span className='block sm:hidden mr-8'>
                 <LanguageDropDown />
               </span>
-              <div className='flex center-items'>
+              {/* <div className='flex center-items'>
                 <button
                   className='cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block sm:hidden outline-none focus:outline-none'
                   type='button'
@@ -205,7 +205,7 @@ export default function NavBar() {
                 >
                   <i className='fas fa-bars' />
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
           <div
@@ -218,7 +218,7 @@ export default function NavBar() {
             <ul className='flex flex-col sm:flex-row list-none sm:ml-auto items-center'>
               <ul className=' items-center flex flex-col lg:mt-0 sm:flex-row list-none sm:ml-auto'>
                 <li className='flex flex-col sm:flex-row text-center lg:pr-8'>
-                  <HashLink
+                  {/* <HashLink
                     smooth
                     to='/research-center/#research-center-hero'
                     className='py-2 px-2 xl:px-3 block w-full whitespace-nowrap bg-transparent text-blueGray-700 ease-linear transition-all duration-150'
@@ -231,9 +231,9 @@ export default function NavBar() {
                     >
                       {t('navbar.navlink5')}
                     </span>
-                  </HashLink>
+                  </HashLink> */}
                 </li>
-                {/* <li className='px-0 xl:px-3 py-3 lg:py-0'></li> */}
+                <li className='px-0 xl:px-3 py-3 lg:py-0'></li>
               </ul>
             </ul>
             <span className='hidden sm:block'>
